@@ -2,7 +2,8 @@
 SoftwareTechnologies team project
 
 **Basic Project Idea:**  
-BACKEND:  
+
+**BACKEND:**
 Login -   
 Register - CAPTCHA  
 Posts - 
@@ -14,14 +15,7 @@ Post Sorting
 Tag System
 Searching
 
-FRONTEND:
-
-
-LAYOUT:
-Blog type
--PC
--CONSOLE
--MOBILE
-
-FORUM
-CHAT
+**FRONTEND:**
+Blog type website
+Design
+Layout:-HOME-PC-CONSOLE-MOBILE-FORUM-CHAT
