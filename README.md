@@ -1,10 +1,10 @@
 # PHPeople
 SoftwareTechnologies team project
 
-**Basic Project Idea:**
-BACKEND:
-Login - 
-Register - CAPTCHA
+**Basic Project Idea:**  
+BACKEND:  
+Login -   
+Register - CAPTCHA  
 Posts - 
 Admin Panel - Create Post, Delete Post, Edit post
 User panel - Create post, Edit own post, Delete own post
