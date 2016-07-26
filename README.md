@@ -1,0 +1,2 @@
+# PHPeople
+SoftwareTechnologies team project
