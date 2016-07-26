@@ -16,6 +16,6 @@ Tag System
 Searching
 
 **FRONTEND:**
-Blog type website
-Design
-Layout:-HOME-PC-CONSOLE-MOBILE-FORUM-CHAT
+Blog type website  
+Design  
+Layout:-HOME-PC-CONSOLE-MOBILE-FORUM-CHAT  
