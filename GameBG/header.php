@@ -98,13 +98,13 @@
 
             // Menu hover effects
             $("ul > a:not(#games-menu)").mouseover(function() {
-                $("#games").fadeOut('slow');
+                $("#games").fadeOut();
             });
             $("ul > a:not(#about-menu)").mouseover(function() {
-                $("#about").fadeOut('slow');
+                $("#about").fadeOut();
             });
             $("ul > a:not(#blog-menu)").mouseover(function() {
-                $("#blog").fadeOut('slow');
+                $("#blog").fadeOut();
             });
 
             $("header").mouseleave(function() {
@@ -112,17 +112,17 @@
             });
             $("#games-menu").mouseover(function() {
                 $(":animated").promise().done(function() {
-                    $("#games").fadeIn('slow');
+                    $("#games").fadeIn();
                 });
             });
             $("#about-menu").mouseover(function() {
                 $(":animated").promise().done(function() {
-                    $("#about").fadeIn('slow');
+                    $("#about").fadeIn();
                 });
             });
             $("#blog-menu").mouseover(function() {
                 $(":animated").promise().done(function() {
-                    $("#blog").fadeIn('slow');
+                    $("#blog").fadeIn();
                 });
             });
         });

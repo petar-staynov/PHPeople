@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Blog</title>
-</head>
-<body>
+<?php 
+	include_once 'header.php';
+?>
 
-</body>
-</html>
+<!-- Content here -->
+
+<?php 
+	include_once 'footer.php';
+?>

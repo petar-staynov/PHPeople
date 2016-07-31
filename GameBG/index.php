@@ -2,6 +2,6 @@
     include_once 'header.php';
 ?>
 
-<footer>&copy;PHPeople</footer>
-</body>
-</html>
+<?php 
+	include_once 'footer.php';
+?>

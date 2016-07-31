@@ -1,5 +1,7 @@
 <?php 
-    include_once 'games-page-header.php';
+    include_once 'header.php';
 ?>
-</body>
-</html>
+
+<?php 
+    include_once 'footer.php';
+?>

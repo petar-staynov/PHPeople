@@ -49,9 +49,8 @@
 			</div>
 		</div>
 	</div>
-<footer>
-	<p>&copy;PHPeople</p>
-
-</footer>
-</body>
-</html>
+	<div class="clearfix"></div>
+	<div class="margin-bottom"></div>
+<?php 
+	include_once 'footer.php';
+?>
