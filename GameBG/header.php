@@ -126,10 +126,10 @@
                 <a href="games.php" class="menu-link"><li>Games</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">Battlefield</a></li>
-                        <li><a href="#">Battlefield</a></li>
-                        <li><a href="#">Battlefield</a></li>
-                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">League of Legends</a></li>
+                        <li><a href="#">CS:GO</a></li>
+                        <li><a href="#">DOTA 2</a></li>
+                        <li><a href="#">Battlefield 1</a></li>
                     </ul>
                 </div>
             </div>
@@ -141,8 +141,8 @@
                 <div class="dropdown">
                     <ul>
                         <li><a href="#">PC</a></li>
-                        <li><a href="#">PS4</a></li>
-                        <li><a href="#">XBOX</a></li>
+                        <li><a href="#">Console</a></li>
+                        <li><a href="#">Mobile</a></li>
                     </ul>
                 </div>
             </div>
