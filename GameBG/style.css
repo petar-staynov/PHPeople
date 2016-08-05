@@ -80,7 +80,7 @@
 	background-color: rgba(10, 44, 66, 0.6);
 	outline: none;
 	border: 1px solid rgba(72, 247, 209, 0);
-	transition: border 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
+	transition: border-bottom 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
 }
 .login-page .form .form-container div input:focus {
 	border-bottom: 1px solid rgba(72, 247, 209, 0.6);
@@ -111,58 +111,17 @@
 :-moz-placeholder { /* Firefox 18- */
    color: #48F7D1;
    font-size: 14px;
-<<<<<<< HEAD
-=======
-   font-style: italic;
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
->>>>>>> origin/master
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #48F7D1;
-<<<<<<< HEAD
-   font-size: 14px;  
-=======
-   font-size: 14px;
-   font-style: italic;
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out; 
->>>>>>> origin/master
 }
 
 :-ms-input-placeholder {  
    color: #48F7D1;
    font-size: 14px;
-<<<<<<< HEAD
-=======
-   font-style: italic;
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
 }
 
-/* Place Holder CSS for Focus */
-:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus:-moz-placeholder {
-  opacity: 0;
-  -moz-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus:-ms-input-placeholder {  
-  opacity: 0;
-  -ms-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
->>>>>>> origin/master
-}
 .error {
 	color:#E95757;
 	text-shadow: 0 0 2px #E95757, 0 0 2px #E95757;
@@ -246,8 +205,15 @@ nav ul .menu-div .dropdown {
 .dropdown ul li:hover {
 	background: rgba(0, 0, 0, 0.6); 
 }
-.dropdown ul li a:hover {
-
+.dropdown ul li a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	display: block;
+	width: 100%;
+	padding: 0;
+	transition: background-color 0.45s ease-in-out, padding 0.45s ease-in-out;
 }
 
 

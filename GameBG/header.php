@@ -119,38 +119,44 @@
 <header>
     <nav>
         <ul>
-            <div id="home-menu" class="menu-div">
+            <div class="menu-div">
                 <a href="index.php" class="menu-link"><li>Home</li></a>
             </div>            
-            <div id="games-menu" class="menu-div">
+            <div class="menu-div">
                 <a href="games.php" class="menu-link"><li>Games</li></a>
-                <div class="games dropdown">
+                <div class="dropdown">
                     <ul>
-                        <li><a href="#">League of Legends</a></li>
-                        <li><a href="#">CS:GO</a></li>
-                        <li><a href="#">DOTA 2</a></li>
-                        <li><a href="#">Battlefield 1</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
                     </ul>
                 </div>
             </div>
-            <div id="about-menu" class="menu-div">
+            <div class="menu-div">
                 <a href="about.php" class="menu-link"><li>About</li></a>
             </div>
-            <div id="blog-menu" class="menu-div">
+            <div class="menu-div">
                 <a href="blog.php" id="blog-menu" class="menu-link"><li>Blog</li></a>
-                <div class="blog dropdown">
+                <div class="dropdown">
                     <ul>
                         <li><a href="#">PC</a></li>
-                        <li><a href="#">Console</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">PS4</a></li>
+                        <li><a href="#">XBOX</a></li>
                     </ul>
                 </div>
             </div>
             <div>
                 <a href="contacts.php" id="login-menu" class="menu-link"><li>Contacts</li></a>
             </div>
-            <div>
-                <a href="login-form.php" id="login-menu" class="menu-link"><li>Sign in/Register</li></a>
+            <div class="menu-div">
+                <a href="login-form.php" id="login-menu" class="menu-link"><li>Account</li></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Sign in</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
             </div>
         </ul>
     </nav>
