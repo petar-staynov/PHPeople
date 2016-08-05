@@ -193,6 +193,7 @@ nav ul .menu-div .dropdown {
 }
 .dropdown ul {
 	list-style-type: none;
+	padding: 0;
 }
 .dropdown ul li {
 	padding: 10px 0;
