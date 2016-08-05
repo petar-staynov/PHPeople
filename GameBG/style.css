@@ -83,7 +83,7 @@
 	transition: border 0.45s ease-in-out, box-shadow 0.45s ease-in-out;
 }
 .login-page .form .form-container div input:focus {
-	border: 1px solid rgba(72, 247, 209, 0.6);
+	border-bottom: 1px solid rgba(72, 247, 209, 0.6);
 	box-shadow: 0 0 50px -10px #48F7D1;
 }
 .login-page .form .form-container div input[type="submit"] {
@@ -106,57 +106,22 @@
 ::-webkit-input-placeholder {
    color: #48F7D1;
    font-size: 14px;
-   font-style: italic;
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    color: #48F7D1;
    font-size: 14px;
-   font-style: italic
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #48F7D1;
-   font-size: 14px;
-   font-style: italic 
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out; 
+   font-size: 14px;  
 }
 
 :-ms-input-placeholder {  
    color: #48F7D1;
    font-size: 14px;
-   font-style: italic
-   -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
 }
-
-/* Place Holder CSS for Focus */
-:focus::-webkit-input-placeholder {
-  opacity: 0;
-  -webkit-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus:-moz-placeholder {
-  opacity: 0;
-  -moz-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus::-moz-placeholder {
-  opacity: 0;
-  -moz-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-:focus:-ms-input-placeholder {  
-  opacity: 0;
-  -ms-transition: opacity 0.45s ease-in-out;
-  transition: opacity 0.45s ease-in-out;
-}
-
 .error {
 	color:#E95757;
 	text-shadow: 0 0 2px #E95757, 0 0 2px #E95757;
@@ -181,103 +146,69 @@ header {
 	width: 100%;
 	font-weight: 400;
 	border: none;
-	background: #64FFC4; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(top left, #87A8EE, #142E66); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(top left, #87A8EE, #142E66); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(top left, #87A8EE, #142E66); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(top left, #87A8EE, #142E66); /* Standard syntax */
+	background: #098FE3; /* For browsers that do not support gradients */
 	position: fixed;
 	top: 0;
 }
-header .logo {
-	width: 30px;
-	transition: 0.7s;
-	float: left;
-}
-header:hover > .logo {
-	width: 220px;
-}
-header .logo img {
-	height: 100%;
-	width: 100%;
-}
-header .logo .logo-text {
-	font-size: 7px;
-	transition: 0.7s;
-	color: white;
-	font-family: 'Quarz974';
-	letter-spacing: 0px;
-}
-header .logo .logo-text span {
-	color: black;
-}
-header:hover .logo .logo-text {
-	font-size: 46px;
-	letter-spacing: 2px;
-}
 header nav {
 	text-align: center;
-	float: right;
 }
 nav ul {
 	list-style-type: none;
 	padding: 10px 0;
 }
-nav ul a {
-	color: #48F7D1;
+nav ul div {
+	margin-bottom: 10px;
+	float: left;
+}
+nav ul div a {
+	color: white;
 	text-decoration: none;
 	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	padding: 10px 0;
-	transition: 0.7s;
+	transition: background-color 0.45s ease-in-out, padding 0.45s ease-in-out;
 }
-nav ul a:hover {
+nav ul div .menu-link:hover {
 	background-color: rgba(0, 0, 0, 0.6);
-	padding: 15px 0;
+	padding: 10px 0;
 }
-nav ul a li {
+nav ul div a li {
 	display: inline;
 	padding: 10px 60px;
 	transition: 0.4s;
 }
-header:hover nav ul a li {
-	padding: 10px 65px;
-}
 .active {
 	background-color: rgba(0, 0, 0, 0.6);
 }
-
-header .games {
-	width: 80%;
-	height: 200px;
-	float: right;
-	margin-top: 20px;
+nav ul .menu-div {
+	position: relative;
+}
+nav ul .menu-div .dropdown {
+	position: absolute;
+	width: 100%;
+	margin-top: 10px;
+	background: #3076C1;
 	display: none;
 }
-header .games .single-game {
-	width: 220px;
-	height: 100%;
-	margin: 0 40px;
-	float: right;
+.dropdown ul {
+	list-style-type: none;
 }
-header .games .single-game img {
-	width: 100%;
-	height: 100%;
-}
-header .nav-text {
-	width: 50%;
-	float: right;
+.dropdown ul li {
+	padding: 10px 0;
+	color: white;
 	text-align: center;
-	margin-top: 50px;
-	display: none;	
-}
-header .nav-text h1 {
 	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	font-size: 52px;
-	text-shadow: 3px 3px 10px black;
-	color: #48F7D1;
+	font-size: 20px; 
+	transition: background 0.45s ease-in-out;
 }
+.dropdown ul li:hover {
+	background: rgba(0, 0, 0, 0.6); 
+}
+.dropdown ul li a:hover {
+
+}
+
 
 /*
 

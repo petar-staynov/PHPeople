@@ -79,6 +79,8 @@
             let page = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
             page = page.split("?");
             page = page[0];
+            page = page.split("#");
+            page = page[0];
 
             switch(page) {
                 case "":
@@ -104,75 +106,52 @@
             }
 
             // Menu hover effects
-            $("ul > a:not(#games-menu)").mouseover(function() {
-                $("#games").fadeOut();
+            $(".menu-div").mouseover(function() {
+                $(this).children('div').slideDown();
             });
-            $("ul > a:not(#about-menu)").mouseover(function() {
-                $("#about").fadeOut();
-            });
-            $("ul > a:not(#blog-menu)").mouseover(function() {
-                $("#blog").fadeOut();
-            });
-
-            $("header").mouseleave(function() {
-                $("header > div:not(.logo)").css('display', 'none');
-            });
-            $("#games-menu").mouseover(function() {
-                $(":animated").promise().done(function() {
-                    $("#games").fadeIn();
-                });
-            });
-            $("#about-menu").mouseover(function() {
-                $(":animated").promise().done(function() {
-                    $("#about").fadeIn();
-                });
-            });
-            $("#blog-menu").mouseover(function() {
-                $(":animated").promise().done(function() {
-                    $("#blog").fadeIn();
-                });
+            $(".menu-div").mouseleave(function() {
+                $(this).children('div').slideUp();
             });
         });
     </script>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <img src="images/Logo/controller-logo-test2.png">
-        <h1 class="logo-text">Game<span>BG</span></h1>
-    </div>
     <nav>
         <ul>
-            <a href="index.php" id="home-menu"><li>Home</li></a>
-            <a href="games.php" id="games-menu"><li>Games</li></a>
-            <a href="about.php" id="about-menu"><li>About</li></a>
-            <a href="blog.php" id="blog-menu"><li>Blog</li></a>
-            <a href="login-form.php" id="login-menu"><li>Sign in/Register</li></a>
-            <a href="contacts.php" id="login-menu"><li>Contacts</li></a>
+            <div id="home-menu" class="menu-div">
+                <a href="index.php" class="menu-link"><li>Home</li></a>
+            </div>            
+            <div id="games-menu" class="menu-div">
+                <a href="games.php" class="menu-link"><li>Games</li></a>
+                <div class="games dropdown">
+                    <ul>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                        <li><a href="#">Battlefield</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="about-menu" class="menu-div">
+                <a href="about.php" class="menu-link"><li>About</li></a>
+            </div>
+            <div id="blog-menu" class="menu-div">
+                <a href="blog.php" id="blog-menu" class="menu-link"><li>Blog</li></a>
+                <div class="blog dropdown">
+                    <ul>
+                        <li><a href="#">PC</a></li>
+                        <li><a href="#">PS4</a></li>
+                        <li><a href="#">XBOX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <a href="contacts.php" id="login-menu" class="menu-link"><li>Contacts</li></a>
+            </div>
+            <div>
+                <a href="login-form.php" id="login-menu" class="menu-link"><li>Sign in/Register</li></a>
+            </div>
         </ul>
     </nav>
-    <div class="games" id="games">
-        <div class="single-game">
-            <img src="images/battlefield-bg-1.jpg">
-        </div>
-        <div class="single-game">
-            <img src="images/battlefield-bg-1.jpg">
-        </div>
-        <div class="single-game">
-            <img src="images/battlefield-bg-1.jpg">
-        </div>
-        <div class="single-game">
-            <img src="images/battlefield-bg-1.jpg">
-        </div>
-        <div class="single-game">
-            <img src="images/battlefield-bg-1.jpg">
-        </div>
-    </div>
-    <div class="nav-text" id="about">
-        <h1>Научете повече за нас</h1>
-    </div>
-    <div class="nav-text" id="blog">
-        <h1>Посетете нашия блог</h1>
-        <!-- Последни статии -->
-    </div>
 </header>
