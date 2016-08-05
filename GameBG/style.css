@@ -111,16 +111,57 @@
 :-moz-placeholder { /* Firefox 18- */
    color: #48F7D1;
    font-size: 14px;
+<<<<<<< HEAD
+=======
+   font-style: italic;
+   -webkit-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+>>>>>>> origin/master
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #48F7D1;
+<<<<<<< HEAD
    font-size: 14px;  
+=======
+   font-size: 14px;
+   font-style: italic;
+   -webkit-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out; 
+>>>>>>> origin/master
 }
 
 :-ms-input-placeholder {  
    color: #48F7D1;
    font-size: 14px;
+<<<<<<< HEAD
+=======
+   font-style: italic;
+   -webkit-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  -moz-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+}
+:focus:-ms-input-placeholder {  
+  opacity: 0;
+  -ms-transition: opacity 0.45s ease-in-out;
+  transition: opacity 0.45s ease-in-out;
+>>>>>>> origin/master
 }
 .error {
 	color:#E95757;
