@@ -11,7 +11,7 @@
 			<div>
 				<img src="images/footer-message.png">
 				<h1>Нужда от помощ?</h1>
-				<p>support@bgamebg.com</p>
+				<p>support@gamebg.com</p>
 			</div>
 		</div>
 		<div class="footer-col">

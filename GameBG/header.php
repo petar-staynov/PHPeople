@@ -11,6 +11,7 @@
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <script src="js/jquery-3.0.0.js">
     </script>
@@ -26,7 +27,8 @@
                     },
                     username: {
                         required: true,
-                        minlength: 3
+                        minlength: 3,
+                        maxlength: 40
                     },
                     password: {
                         required: true,
@@ -44,7 +46,8 @@
                     },
                     username: {
                         required: "Моля въведете име",
-                        minlength: "Името трябва да бъде с минимална дължина 3 символа"
+                        minlength: "Името трябва да бъде с минимална дължина 3 символа",
+                        maxlength: "Името не може да бъде с по-голяма дължина от 40 символа"
                     },
                     password: {
                         required: "Моля въведете парола",
@@ -63,6 +66,8 @@
             // Add class active to the current link 
             $(function() {
                 var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+                pgurl = pgurl.split("?");
+                pgurl = pgurl[0];
 
                 $("nav ul a").each(function(){
                 if($(this).attr("href") == pgurl || $(this).attr("href") == '')
@@ -72,6 +77,8 @@
 
             // Add class to the body
             let page = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+            page = page.split("?");
+            page = page[0];
 
             switch(page) {
                 case "":
