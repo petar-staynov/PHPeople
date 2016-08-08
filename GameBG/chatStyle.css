@@ -1,0 +1,71 @@
+.ScrollStyle
+{
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #5880ed;
+    width: 95%;
+    position: relative;
+    text-align: left;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+#msg{
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 95%;
+    height: 12%;
+}
+#uname{
+    position: absolute;
+    left: 3%;
+    top: 14%;
+}
+#ChatContainer{
+    background-color: #5880ed;
+    margin-top: 5%;
+    width: 300px;
+    height: 90%;
+    float: right;
+    border-radius: 4px;
+}
+#sendMsgButton{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5880ed;
+    padding: 2px;
+    border-radius: 3px;
+}
+#sendMsgButton:hover{
+    background-color: #5f5fdd;
+}
+#loadingChatImage{
+    position: absolute;
+    left: 41%;
+    top: 48%;
+    width: 69px;
+    height: 69px;
+}
+#closeChatButton{
+    position: absolute;
+    right: 33px;
+    margin-top: 5%;
+    background-color: #4669ed;
+    padding: 4px;
+    border-radius: 2px;
+}
+#closeChatButton:hover{
+    cursor: pointer;
+}
+#openChatButton{
+    position: absolute;
+    top: 92%;
+    right: 6%;
+    background-color: #4669ed;
+    border-radius: 8px;
+    padding: 10px;
+}
+#openChatButton:hover{
+    cursor: pointer;
+    background-color: #3d5cc8;
+}

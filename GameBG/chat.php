@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Chat</title>
-    <link href="style2.css" rel="stylesheet">
+    <link href="chatStyle.css" rel="stylesheet">
     <script src="js/jquery-3.0.0.js"></script>
     <script src="chat.js" rel="script"></script>
 </head>

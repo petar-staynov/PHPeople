@@ -25,6 +25,7 @@ $(document).ready(function () {
     $.ajaxSetup({cache:false});
     var hiddenChat = false;
     $("#openChatButton").hide();
+    var h;
     if (!hiddenChat){
         //if open Chat button is clicked ---> then load logs.php;
         var intervalLoadingLogs = setInterval(function () {
@@ -45,7 +46,8 @@ $(document).ready(function () {
         });
         //close the whole Chat and renew our hiddenChat var to True;
         $("#closeChatButton").click(function () {
-            $("#ChatContainer").fadeOut('fast');
+            h = $("#ChatContainer").height();
+            $('#ChatContainer').animate({ opacity: 0, height: 300 }, 'slow');
             $(this).fadeOut('fast');
             $("#openChatButton").fadeIn('fast');
             hiddenChat = true;
@@ -53,7 +55,7 @@ $(document).ready(function () {
     }
     //open the whole Chat and renew our hiddenChat var to False;
     $("#openChatButton").click(function () {
-            $("#ChatContainer").fadeIn('fast');
+            $("#ChatContainer").animate({opacity: 1, height: h}, 'slow');
             $("#closeChatButton").fadeIn('fast');
             $("#openChatButton").fadeOut('fast');
             hiddenChat = false;
