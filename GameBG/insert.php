@@ -20,7 +20,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-/*
+
 $sql = "SELECT username, msg FROM logs";
 $result = $conn->query($sql);
 
@@ -29,4 +29,4 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "-" . $row["username"]. ": " . $row["msg"] . "<hr>";
     }
-}*/
+}
