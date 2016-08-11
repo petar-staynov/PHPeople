@@ -25,7 +25,7 @@ function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
 		<td><?=cutLongText($post['content'])?></td>
 		<td><?=htmlspecialchars($post['date'])?></td>
 		<td><?=htmlspecialchars($post['tag'])?></td>
-		<td><?=$post['user_id']?></td>
+		<td><?=$post['author_id']?></td>
 		<td><a href="GameBG/posts/edit/<?=$post['id']?>">[Edit]</a>
 			<a href="GameBG/posts/delete/<?=$post['id']?>">[Delete]</a>
 		</td>
@@ -34,3 +34,4 @@ function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
 <?php 
 	include_once 'footer.php';
 ?>
+
