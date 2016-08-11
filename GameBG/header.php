@@ -141,10 +141,10 @@
                 <a href="games.php" class="menu-link"><li>Games</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">League of Legends</a></li>
-                        <li><a href="#">CS:GO</a></li>
-                        <li><a href="#">DOTA 2</a></li>
-                        <li><a href="#">Battlefield 1</a></li>
+                        <li><a href="lol.php">League of Legends</a></li>
+                        <li><a href="csgo.php">CS:GO</a></li>
+                        <li><a href="dota-2.php">DOTA 2</a></li>
+                        <li><a href="battlefield-1.php">Battlefield 1</a></li>
                     </ul>
                 </div>
             </div>
