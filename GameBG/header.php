@@ -155,9 +155,9 @@
                 <a href="blog.php" id="blog-menu" class="menu-link"><li>Blog</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">PC</a></li>
-                        <li><a href="#">Console</a></li>
-                        <li><a href="#">Mobile</a></li>
+                        <li><a href="pc-gaming.php">PC</a></li>
+                        <li><a href="console-gaming.php">Console</a></li>
+                        <li><a href="mobile-gaming.php">Mobile</a></li>
                     </ul>
                 </div>
             </div>

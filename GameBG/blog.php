@@ -1,9 +1,7 @@
-<?php 
-	include_once 'header.php';
-?>
+<?php include_once 'header.php'; ?>
 
 <?php
-require_once ('connection.php');
+require_once('connection.php');
 $statement = $connection->query('SELECT * FROM posts ORDER BY date DESC');
 $statement->fetch_all(MYSQLI_ASSOC);
 function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
@@ -31,7 +29,7 @@ function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
 		</td>
 	</tr>
 <?php endforeach ?>
-<?php 
+<?php
 	include_once 'footer.php';
 ?>
 
