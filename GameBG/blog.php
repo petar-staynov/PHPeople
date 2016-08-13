@@ -1,4 +1,7 @@
-<?php include_once 'header.php'; ?>
+<?php
+include_once 'header.php';
+session_start();
+?>
 
 <?php
 require_once('connection.php');
@@ -24,9 +27,13 @@ function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
 		<td><?=htmlspecialchars($post['date'])?></td>
 		<td><?=htmlspecialchars($post['tag'])?></td>
 		<td><?=$post['author_id']?></td>
-		<td><a href="GameBG/posts/edit/<?=$post['id']?>">[Edit]</a>
-			<a href="GameBG/posts/delete/<?=$post['id']?>">[Delete]</a>
+		<?php
+		if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+		if($post['author_id'] == $_SESSION['user_id'] || $_SESSION['username'] == "admin") {?>
+		<td><a href="#">[Edit]</a>
+			<a href="#">[Delete]</a>
 		</td>
+		<?php }}?>
 	</tr>
 <?php endforeach ?>
 <?php
