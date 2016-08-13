@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -158,6 +159,10 @@
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
+
+                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                        <li><a href="create-post.php">Create Post</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
@@ -173,6 +178,11 @@
                     </ul>
                 </div>
             </div>
+            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                <div class="menu-div">
+                    <a href="logout.php" id="login-menu" class="menu-link"><li>Logout</li></a>
+                </div>
+            <?php } ?>
         </ul>
     </nav>
 </header>

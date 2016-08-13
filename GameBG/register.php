@@ -27,7 +27,7 @@
 		//If email or username does not exist register the user
 		else {
 			$sql = 'INSERT INTO users (email, username, password, date_registered) VALUES ("'.$email.'", "'.$username.'", "'.$password.'", NOW())';
-
+			
 			if (!mysqli_query($connection, $sql)) {
 				header('Location: login-form.php?reg-error=1');
 			}
