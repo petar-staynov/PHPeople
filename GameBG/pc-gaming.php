@@ -1,4 +1,5 @@
 <?php
+$title = "PC Gaming";
 include_once 'header.php';
 ?>
 <?php

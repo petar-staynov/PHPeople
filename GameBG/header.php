@@ -1,10 +1,11 @@
 <?php
 session_start();
-ob_start();?>
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <title>Home</title>
+    <title><?=$title?></title>
     <meta charset="utf-8">
 
     <link rel="icon" type="image/png" href="images/Logo/fav-icon.png">

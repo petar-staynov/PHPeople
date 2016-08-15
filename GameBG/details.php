@@ -1,4 +1,5 @@
 <?php
+$title = "Details";
 include_once 'header.php';
 include_once 'connection.php';
 session_start();

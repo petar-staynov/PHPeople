@@ -1,4 +1,5 @@
 <?php
+$title = "Console Gaming";
 include_once 'header.php';
 ?>
 <?php

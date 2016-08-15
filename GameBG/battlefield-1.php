@@ -1,4 +1,5 @@
 <?php
+$title = "Battlefield 1";
 include_once 'header.php';
 ?>
 

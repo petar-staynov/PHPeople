@@ -1,4 +1,5 @@
 <?php
+$title = "Dota 2";
 include_once 'header.php';
 ?>
 

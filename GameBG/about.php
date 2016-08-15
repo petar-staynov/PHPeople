@@ -1,4 +1,5 @@
-<?php 
+<?php
+    $title = "About";
 	include_once 'header.php';
 ?>
 

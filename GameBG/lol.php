@@ -1,4 +1,5 @@
 <?php
+$title = "League of Legends";
 include_once 'header.php';
 ?>
 

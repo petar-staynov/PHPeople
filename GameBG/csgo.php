@@ -1,4 +1,5 @@
 <?php
+$title = "Counter-strike GO";
 include_once 'header.php';
 ?>
 

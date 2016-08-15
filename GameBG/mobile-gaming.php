@@ -1,4 +1,5 @@
 <?php
+$title = "Mobile Gaming";
 include_once 'header.php';
 ?>
 <?php
