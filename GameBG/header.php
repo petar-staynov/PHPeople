@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php
+session_start();
+ob_start();?>
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -159,9 +161,9 @@
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                        <li><a href="create-post.php">Create Post</a></li>
-                        <?php } ?>
+                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                     <li><a href="create-post.php">Create Post</a></li>
+                     <?php } ?>
                     </ul>
                 </div>
             </div>

@@ -25,14 +25,14 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
             </select>
         </div>
         <div>
-            <input type="submit" VALUE="Create">
+            <input type="submit" VALUE="Create" name="create">
             <a href="blog.php">[Cancel]</a>
         </div>
     </form>
     </body>
     </html>
     <?php
-    $errors = true;
+    $errors = false;
     if (isset($_POST['post_title']) && isset($_POST['post_content']) && isset($_POST['post_title']) && isset($_POST['tag'])) {
         if (!empty($_POST['post_title'])) {
             $title = $_POST['post_title'];
@@ -46,17 +46,17 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
             echo $titleError = "Please enter a title.<br>";
             $errors = true;
         }
-        $content = $_POST['post_content'];
-        $tag = $_POST['tag'];
-        $userID = $_SESSION['user_id'];
-        $statement = $connection->prepare('INSERT INTO posts (title, content, tag, author_id) VALUES (?,?,?,?)');
-        $statement->bind_param("sssi", $title, $content, $tag, $userID);
-        $statement->execute();
+        if(isset($_POST['create'])) {
+            $content = $_POST['post_content'];
+            $tag = $_POST['tag'];
+            $userID = $_SESSION['user_id'];
+            $statement = $connection->prepare('INSERT INTO posts (title, content, tag, author_id) VALUES (?,?,?,?)');
+            $statement->bind_param("sssi", $title, $content, $tag, $userID);
+            $statement->execute();
+            header('Location: blog.php');
+            die();
+        }
     }
-}
-else
-{
-    die("<script type='text/javascript'> window.location.href = 'index.php'; </script>");
 }
 ?>
 <?php include_once 'footer.php'?>
