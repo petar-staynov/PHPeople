@@ -1,12 +1,13 @@
 <?php
 $title = "Mobile Gaming";
 include_once 'header.php';
+session_start();
 ?>
 <?php
 require_once('connection.php');
 $statement = $connection->query('SELECT * FROM posts WHERE posts.tag = "MOBILE GAMING" ORDER BY date DESC');
 $statement->fetch_all(MYSQLI_ASSOC);
-function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
+function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 {
     $append = '';
     if (strlen($text) > $maxSize) {

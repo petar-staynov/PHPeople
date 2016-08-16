@@ -1,12 +1,13 @@
 <?php
 $title = "PC Gaming";
 include_once 'header.php';
+session_start();
 ?>
 <?php
 require_once('connection.php');
 $statement = $connection->query('SELECT * FROM posts WHERE posts.tag = "PC GAMING" ORDER BY date DESC');
 $statement->fetch_all(MYSQLI_ASSOC);
-function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
+function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 {
     $append = '';
     if (strlen($text) > $maxSize) {
@@ -24,8 +25,8 @@ function cutLongText($text,  $maxSize=200,  $htmlEscape = true)
         <th>Title</th>
         <th>Content</th>
         <th>Date</th>
-        <td>Tag</td>
-        <td>Author ID</td>
+        <th>Tag</th>
+        <th>Author ID</th>
         <th>Action</th>
     </tr>
     <?php foreach($statement as $post) :?>
