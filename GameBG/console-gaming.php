@@ -41,7 +41,7 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
             <?php
             if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
                 if($post['author_id'] == $_SESSION['user_id'] || $_SESSION['username'] == "admin") {?>
-                    <td><a href="#">[Edit]</a>
+                    <td><a href="edit.php?id=<?=$post['id']?>">[Edit]</a>
                         <a href="delete.php?id=<?=$post['id']?>">[Delete]</a>
                     </td>
                 <?php }

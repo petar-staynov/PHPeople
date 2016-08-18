@@ -32,7 +32,7 @@ $row = $statement->fetch_assoc();
                 <?php
                 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
                     if($row['author_id'] == $_SESSION['user_id'] || $_SESSION['username'] == "admin") {?>
-                        <td><a href="#">[Edit]</a></td>
+                        <td><a href="edit.php?id=<?=$row['id']?>">[Edit]</a></td>
                         <td><a href="delete.php?id=<?=$row['id']?>">[Delete]</a></td>
                     <?php }
                 }?>

@@ -59,6 +59,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
         }
     }
 }
+else {
+    header('Location: index.php');
+}
 ?>
 <?php include_once 'footer.php'?>
 
