@@ -17,6 +17,11 @@ ob_start();
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+    <!-- Chat -->
+    <link href="chatStyle.css" rel="stylesheet">
+    <script src="js/jquery-3.0.0.js"></script>
+    <script src="chat.js" rel="script"></script>
+
     <script src="js/jquery-3.0.0.js">
     </script>
     <script src="js/jquery.validate.js">
@@ -133,6 +138,12 @@ ob_start();
         	});
         });
     </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".game-wrapper").css('background-position', '-650px 0');
+        });
+    </script>
 </head>
 <body>
 <header>
@@ -145,10 +156,10 @@ ob_start();
                 <a href="games.php" class="menu-link"><li>Games</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="lol.php">League of Legends</a></li>
-                        <li><a href="csgo.php">CS:GO</a></li>
-                        <li><a href="dota-2.php">DOTA 2</a></li>
-                        <li><a href="battlefield-1.php">Battlefield 1</a></li>
+                        <li><a href="#">League of Legends</a></li>
+                        <li><a href="#">CS:GO</a></li>
+                        <li><a href="#">DOTA 2</a></li>
+                        <li><a href="#">Battlefield 1</a></li>
                     </ul>
                 </div>
             </div>

@@ -29,8 +29,11 @@
     margin-top: 5%;
     width: 300px;
     height: 90%;
-    float: right;
     border-radius: 4px;
+    color: white;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
 }
 #sendMsgButton{
     text-decoration: none;
@@ -53,9 +56,9 @@
     height: 69px;
 }
 #closeChatButton{
-    position: absolute;
+    position: fixed;
     right: 33px;
-    margin-top: 5%;
+    top: 100px;
     background-color: #4669ed;
     padding: 4px;
     border-radius: 2px;
@@ -65,8 +68,8 @@
     cursor: pointer;
 }
 #openChatButton{
-    position: absolute;
-    top: 92%;
+    position: fixed;
+    top: 90%;
     right: 6%;
     background-color: #4669ed;
     border-radius: 8px;

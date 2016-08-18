@@ -18,7 +18,7 @@
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['user_id'] = $row['user_id'];
 		if (!mysqli_query($connection, $sql)) {
-			header('Location: login-form.php?login-error=0');
+			header('Location: index.php?login-error=0');
 		}
 
 		else {

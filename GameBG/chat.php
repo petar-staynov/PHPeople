@@ -1,11 +1,4 @@
-<html>
-<head>
-    <title>Chat</title>
-    <link href="chatStyle.css" rel="stylesheet">
-    <script src="js/jquery-3.0.0.js"></script>
-    <script src="chat.js" rel="script"></script>
-</head>
-<body style="background-color: cornflowerblue; color: white;">
+
 <input type="text" id="uname" placeholder="Username"/>
 <div id="openChatButton">Open Public Chat</div>
 <div id="ChatContainer">
@@ -22,5 +15,3 @@
     </div>
 </div>
 <div id="closeChatButton">X</div>
-</body>
-</html>

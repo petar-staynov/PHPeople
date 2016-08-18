@@ -113,6 +113,7 @@ nav ul .menu-div .dropdown {
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.7);
 	position: fixed;
+	top: 0;
 	z-index: 1000;
 	display: none;
 }
@@ -233,12 +234,95 @@ nav ul .menu-div .dropdown {
 /*
 
 
-	Gaming Community
+	Games
 
 
 
 */
-.gaming-community-page{
+.games-page{
+	background-color: #EAEAEA;
+}
+.games-page .play {
+	width: 100%;
+	margin: 150px 0 100px 0;
+}
+.games-page .play h2 {
+	width: 100%; 
+	color: #098FE3;
+	text-align: center; 
+	border-bottom: 1px solid #098FE3; 
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+	font-size: 34px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+.games-page .play span {
+	background:#EAEAEA; 
+    padding:0 50px; 
+}
+.games-page .game-wrapper {
+	width: 1280px;
+	height: 1240px;
+	margin: 50px auto;
+	background: url("images/Games/bg.png");
+	background-size: 160%;
+	background-position: 0 0;
+	transition: background-position 7s;
+}
+.games-page .game-wrapper .single-device {
+	width: 25%;
+	float: left;
+	font-size: 28px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: white;
+	background-color: #098FE3;
+	text-align: center;
+	transition: background 0.45s ease-in-out;
+	cursor: pointer;
+}
+.games-page .game-wrapper .single-device p {
+	padding: 20px 0;
+}	
+.games-page .game-wrapper .single-device:not(.last) {
+	border-right: 1px solid white;
+	box-sizing: border-box;
+}
+.games-page .game-wrapper .single-device:hover {
+	background: rgba(0, 0, 0, 0.6); 
+}
+.games-page .game-wrapper .single-game {
+	width: 25%;
+	float: left;
+	margin-top: 20px; 
+}
+.games-page .game-wrapper .single-game .game-container {
+	width: 80%;
+	margin: 0 auto;
+	background-color: #098FE3;
+}
+.games-page .game-wrapper .single-game .game-container .game-image {
+	width: 100%;
+	padding-top: 10px;
+}
+.games-page .game-wrapper .single-game .game-container .game-image img {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+}
+.games-page .game-wrapper .single-game .game-container .game-title {
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-align: center;
+}
+.games-page .game-wrapper .single-game .game-container .game-title h2 {
+	font-size: 30px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: white;
 }
 
 
