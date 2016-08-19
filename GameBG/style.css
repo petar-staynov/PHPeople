@@ -431,16 +431,30 @@ footer .footer-2 .footer-2-container div a img {
 
 
 
-	Other
+	FORMS
 
 
 
 */
+
 td{
-	font-size: 20px;
+	font-size: 25px;
 	padding-top: 10px;
-	padding-left: 5px;
+	padding-left: 10px;
 }
 th{
+	font-size: 20px;
+}
+input{
+	font-size: 20px;
+}
+textarea{
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+}
+select {
+font-size: 20px;
+}
+.buttons-size{
 	font-size: 20px;
 }

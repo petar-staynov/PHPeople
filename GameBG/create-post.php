@@ -13,11 +13,11 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
     </head>
     <body>
     <form method="post">
-        <div>Title:</div>
+        <h2>Title:</h2>
         <input type="text" name="post_title"/>
-        <div>Content:</div>
+        <h2>Content:</h2>
         <textarea name="post_content" rows="10"></textarea>
-        <div>Tag:</div>
+        <h2>Tag:</h2>
         <div>
             <select name="tag">
                 <option value="PC GAMING">PC GAMING</option>
@@ -25,7 +25,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
                 <option value="MOBILE GAMING">MOBILE GAMING</option>
             </select>
         </div>
-        <div>
+        <div class="buttons-size">
             <input type="submit" VALUE="Create" name="create">
             <a href="blog.php">[Cancel]</a>
         </div>

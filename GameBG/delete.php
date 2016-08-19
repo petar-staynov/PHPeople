@@ -18,11 +18,11 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <body>
     <form method="post"">
         <h1>Are you sure you want to delete this post?</h1>
-        <div>Title:</div>
+        <h2>Title:</h2>
         <input type="text" name="post_title" value = "<?=$row['title']?>" /disabled>
-        <div>Content:</div>
+        <h2>Content:</h2>
         <textarea name="post_content" rows="10"/disabled><?=$row['content']?></textarea>
-        <div>Tag:</div>
+        <h2>Tag:</h2>
         <div>
             <select name="tag" disabled/>
                 <option><?=$row['tag']?></option>
@@ -30,7 +30,7 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 <option>MOBILE GAMING</option>
             </select>
         </div>
-        <div>
+        <div class="buttons-size">
             <input type="submit" VALUE="Delete" name="delete">
             <a href="blog.php">[Cancel]</a>
         </div>
