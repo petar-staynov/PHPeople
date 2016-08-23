@@ -164,23 +164,17 @@ ob_start();
                 </div>
             </div>
             <div class="menu-div">
-                <a href="about.php" class="menu-link"><li>About</li></a>
-            </div>
-            <div class="menu-div">
                 <a href="blog.php" id="blog-menu" class="menu-link"><li>Blog</li></a>
                 <div class="dropdown">
                     <ul>
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                     <li><a href="create-post.php">Create Post</a></li>
-                     <?php } ?>
+                        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+                            <li><a href="create-post.php">Create Post</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
-            </div>
-            <div>
-                <a href="contacts.php" id="login-menu" class="menu-link"><li>Contacts</li></a>
             </div>
             <div class="menu-div">
                 <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
@@ -196,6 +190,12 @@ ob_start();
                     <a href="logout.php" id="login-menu" class="menu-link"><li>Logout</li></a>
                 </div>
             <?php } ?>
+            <div class="menu-div">
+                <a href="about.php" class="menu-link"><li>About</li></a>
+            </div>
+            <div>
+                <a href="contacts.php" id="login-menu" class="menu-link"><li>Contacts</li></a>
+            </div>
         </ul>
     </nav>
 </header>
