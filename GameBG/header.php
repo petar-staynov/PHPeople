@@ -156,7 +156,7 @@ ob_start();
                 <a href="games.php" class="menu-link"><li>Games</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">League of Legends</a></li>
+                        <li><a href="single-game.php?id=21">League of Legends</a></li>
                         <li><a href="#">CS:GO</a></li>
                         <li><a href="#">DOTA 2</a></li>
                         <li><a href="#">Battlefield 1</a></li>

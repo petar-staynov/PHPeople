@@ -1,0 +1,223 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*
+
+	
+	LOGIN PAGE
+
+
+*/
+.login-page {
+	background-color: black;
+}
+.forms-container {
+	width: 470px;
+	margin: 0 auto;
+	padding-top: 300px;
+}
+.form {
+	width: 400px;
+	min-height: 320px;
+	margin: 0 auto;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid;
+	border-color: rgba(9, 143, 227, 0.8); 
+	font-family: 'Open Sans', sans-serif;
+	transition: background-color 0.4s;
+}
+.form:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.form h1 {
+	text-align: center;
+	color: #098FE3;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+.form hr {
+	width: 96%;
+	margin: 10px auto 30px auto;
+	border: 1px solid #098FE3;
+}
+.form .form-container {
+	width: 80%;
+	margin: 0 auto;
+}
+.form .form-container {
+	width: 80%;
+	margin: 0 auto;
+}
+.form .form-container div {
+	width: 100%;
+	margin: 10px 0;
+}
+.form .form-container div input {
+	width: 100%;
+	padding: 6px 2px;
+	color: #48F7D1;
+	font-size: 18px;
+	background-color: rgba(10, 44, 66, 0.6);
+	outline: none;
+	border: 1px solid rgba(72, 247, 209, 0);
+	transition: border-bottom 0.45s ease-in-out;
+}
+.form .form-container div input:focus {
+	border-bottom: 1px solid rgba(72, 247, 209, 0.6);
+}
+.form .form-container div input[type="submit"] {
+	width: 101.5%;
+	color: #48F7D1;
+	font-weight: 500;
+	font-size: 20px;
+	padding: 7px 2px;
+	background-color: #098FE3;
+	border: none;
+	letter-spacing: 1px;
+	margin-top: 10px;
+}
+.form .form-container div input[type="submit"]:hover {
+	background-color: #0F7DC1;
+}
+
+/* Place Holder CSS */
+::-webkit-input-placeholder {
+   color: #48F7D1;
+   font-size: 14px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #48F7D1;
+   font-size: 14px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #48F7D1;
+}
+
+:-ms-input-placeholder {  
+   color: #48F7D1;
+   font-size: 14px;
+}
+.error {
+	color:#E95757;
+	text-shadow: 0 0 2px #E95757, 0 0 2px #E95757;
+}
+.register-error, .login-error {
+	display: block;
+	text-align: center;
+	font-size: 18px;
+}
+.register-error {
+	padding: 10px 0;
+}
+/*
+
+	HEADER
+
+*/
+header {
+	width: 100%;
+	background-color: #EAEAEA;
+	margin-bottom: 50px;
+}
+header div {
+	text-align: right;
+	padding: 5px 20px;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+}
+header div h2 span {
+	color: #098FE3;
+}
+.sidebar {
+	font-family: 'Lato', sans-serif;
+	background: black;
+	width: 15%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	text-align: center;
+}
+.sidebar h1 {
+	padding: 10px 0;
+}
+.sidebar ul {
+	list-style-type: none;
+	margin-top: 50px;
+}
+.sidebar ul li {
+	width: 100%;
+	font-size: 22px;
+	padding: 15px 0;
+	transition: background 0.45s ease-in-out;
+}
+.sidebar ul .active {
+	background: #098FE3;
+}
+.sidebar ul li:hover {
+	background: #098FE3; 
+}
+.sidebar a {
+	color: white;
+	text-decoration: none;
+}
+/*
+
+	GAME FORM
+
+*/
+.game-form {
+	width: 50%;
+	margin: 0 auto;
+	background: black;
+	border: 1px solid #098FE3;
+}
+.game-form h1 {
+	color: #098FE3;
+	font-family: 'Lato', sans-serif;
+	font-size: 34px;
+	padding: 5px 20px;
+}
+.game-form form div {
+	width: 80%;
+	margin: 20px auto;
+}
+.game-form form div input {
+	width: 100%;
+	padding: 5px 2px;
+}
+::-webkit-input-placeholder {
+   color: black;
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: black;
+   font-style: italic; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black; 
+   font-style: italic; 
+}
+
+:-ms-input-placeholder {  
+   color: black;  
+   font-style: italic;
+}
+.game-form form textarea {
+	width: 100%;
+	height: 150px;
+	padding: 5px 2px;
+}
+.game-form form select {
+	width: 15%;
+	padding: 5px;
+	font-size: 18px;
+}

@@ -25,125 +25,48 @@
 	</div>
 	<div class="clearfix"></div>
 	<!-- Games -->
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
+	<?php 
+		require 'connection.php';
+
+		$sqlCheck = 'SELECT * FROM games';
+		$queryCheck = mysqli_query($connection, $sqlCheck);
+		$allRows = mysqli_num_rows($queryCheck);
+		$pages = ceil($allRows / 12);
+
+		if (isset($_GET['page'])) {
+			$page = $_GET['page'];
+		}
+
+		else {
+			$page = 1;
+		}
+
+		$start_from = ($page - 1) * 12;
+
+		$sql = "SELECT * FROM games LIMIT $start_from, 12";
+
+		$query = mysqli_query($connection, $sql);
+
+		while ($row = mysqli_fetch_assoc($query)) { ?>
+			<div class="single-game">
+				<div class="game-container">
+					<a href="single-game.php?id=<?= $row['id']; ?>">
+						<div class="game-image">
+							<img src="admin/game-images/<?= $row['game_image']; ?>">
+						</div>
+						<div class="game-title">
+							<h2><?= $row['game_title']; ?></h2>
+						</div>
+					</a>
+				</div>
 			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
-	</div>
-	<div class="single-game">
-		<div class="game-container">
-			<div class="game-image">
-				<img src="images/Games/diablo-logo.png">
-			</div>
-			<div class="game-title">
-				<h2>Diablo 3</h2>
-			</div>
-		</div>
+<?php	}
+	?>
+	<div class="page-holder">
+	<?php	for ($i=1; $i <= $pages; $i++) { ?>
+			<a href="games.php?page=<?=$i?>"><?=$i?></a>
+<?php	}
+	?>
 	</div>
 </div>
 
