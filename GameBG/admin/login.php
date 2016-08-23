@@ -1,9 +1,11 @@
 <?php  
 	if (isset($_POST['username']) && isset($_POST['password'])) {
-		$username = $_POST['username'];
-		$password = $_POST['password'];
+		session_start();
+		$_SESSION["username"] = $_POST['username'];
+		$_SESSION["password"] = $_POST['password'];
 
-		if ($username == "gamebg" && $password == "test") {
+		if ($_SESSION["username"] == "gamebg" && $_SESSION["password"] == "test") {
+			$_SESSION["admin"] = true;
 			header("Location: index.php");
 		}
 
