@@ -12,6 +12,7 @@ ob_start();
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="styles/home-content.css" type="text/css">
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
