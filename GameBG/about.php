@@ -2,8 +2,8 @@
     $title = "About";
 	include_once 'header.php';
 ?>
-
- <div class="footer-1">
+<footer>
+    <div class="footer-1">
         <div class="footer-col">
             <div>
                 <img src="images/footer-about.png">
@@ -26,8 +26,8 @@
             </div>
         </div>
         <div class="clearfix"></div>
-</div>
-
+    </div>
+</footer>
 <?php 
 	include_once 'footer.php';
 ?>

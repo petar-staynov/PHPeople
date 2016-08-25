@@ -394,20 +394,16 @@ nav ul .menu-div .dropdown {
 
 
 */
+
 footer{
 	width: 100%;
 	font-family: 'Lato', sans-serif;
-
-	/*Make footer stick to bottom*/
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	height: 100px;
 }
 footer .footer-1 {
 	background-image: url("images/footer-bg.png");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
+
 }
 footer .footer-1 .footer-col {
 	width: 33.3%;
@@ -453,6 +449,12 @@ footer .footer-2 {
 	 background: -moz-linear-gradient(right bottom, #098FE3, #074870); /* For Firefox 3.6 to 15 */
 	 background: linear-gradient(to right bottom, #098FE3, #074870); /* Standard syntax */
 	text-align: center;
+
+	/*Make footer stick to bottom*/
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 100px;
 }
 footer .footer-2 .footer-2-container {
 	height: 100px;

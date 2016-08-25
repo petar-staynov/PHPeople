@@ -1,9 +1,9 @@
 <?php
-	$connection = mysqli_connect('localhost', 'Djimi', 'rounders', 'gamebg');
+$connection = mysqli_connect('localhost', 'root', '', 'gamebg');
 
-	if (!$connection) {
-		die('Something went wrong');
-	}
+    if (!$connection) {
+    die('Something went wrong');
+    }
 
-	mysqli_set_charset($connection, 'utf8');
+    mysqli_set_charset($connection, 'utf8');
 ?>
