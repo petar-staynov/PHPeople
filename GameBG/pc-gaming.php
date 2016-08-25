@@ -26,7 +26,7 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
         <th>Content</th>
         <th>Date</th>
         <th>Tag</th>
-        <th>Author ID</th>
+        <th>Author</th>
         <th>Action</th>
     </tr>
     <?php foreach($statement as $post) :
