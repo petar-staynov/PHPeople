@@ -177,6 +177,9 @@ ob_start();
                     </ul>
                 </div>
             </div>
+            <div>
+                <a href="Chat.php" id="login-menu" class="menu-link"><li>Chat</li></a>
+            </div>
             <div class="menu-div">
                 <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
                 <div class="dropdown">
@@ -193,9 +196,6 @@ ob_start();
             <?php } ?>
             <div class="menu-div">
                 <a href="about.php" class="menu-link"><li>About</li></a>
-            </div>
-            <div>
-                <a href="contacts.php" id="login-menu" class="menu-link"><li>Contacts</li></a>
             </div>
         </ul>
     </nav>
