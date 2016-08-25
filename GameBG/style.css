@@ -389,7 +389,7 @@ nav ul .menu-div .dropdown {
 /*
 
 
-    footer
+    footer-1 aka the footer that was moved in the About page
 
 
 
@@ -440,9 +440,23 @@ footer .footer-1 .footer-col div span {
 	padding: 0 5px;
 	letter-spacing: 1px;
 }
+
+
+
+
+/*
+
+
+    footer-2 aka the real footer
+
+
+
+*/
+
+
 footer .footer-2 {
 	width: 100%;
-	height: 100px;
+	height: f0px;
 	background-color: #098FE3; /* For browsers that do not support gradients */
 	 background: -webkit-linear-gradient(left bottom, #098FE3, #074870); /* For Safari 5.1 to 6.0 */
 	 background: -o-linear-gradient(right bottom, #098FE3, #074870); /* For Opera 11.1 to 12.0 */
@@ -451,10 +465,10 @@ footer .footer-2 {
 	text-align: center;
 
 	/*Make footer stick to bottom*/
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
-	height: 100px;
+	height: 10%;
 }
 footer .footer-2 .footer-2-container {
 	height: 100px;
@@ -463,7 +477,7 @@ footer .footer-2 .footer-2-container div {
 	width: 33.3%;
 	float: left;
 	height: 100%;
-	line-height: 100px;
+	line-height: 50px;
 }
 footer .footer-2 .footer-2-container div h1 {
 	font-family: 'Quarz974';
@@ -474,7 +488,7 @@ footer .footer-2 .footer-2-container div p {
 	font-family: 'Lato', sans-serif;
 }
 footer .footer-2 .footer-2-container div a img {
-	margin-top: 28px;
+	margin-top: 0px;
 }
 /*
 
