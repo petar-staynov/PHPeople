@@ -397,6 +397,12 @@ nav ul .menu-div .dropdown {
 footer{
 	width: 100%;
 	font-family: 'Lato', sans-serif;
+
+	/*Make footer stick to bottom*/
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 100px;
 }
 footer .footer-1 {
 	background-image: url("images/footer-bg.png");
