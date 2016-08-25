@@ -34,6 +34,7 @@
     position: fixed;
     right: 5px;
     bottom: 5px;
+    z-index: 420;
 }
 #sendMsgButton{
     text-decoration: none;
@@ -62,6 +63,7 @@
     background-color: #4669ed;
     padding: 4px;
     border-radius: 2px;
+    z-index: 425;
 }
 #closeChatButton:hover{
     background-color: #2d377b;
@@ -74,16 +76,13 @@
     background-color: #4669ed;
     border-radius: 8px;
     padding: 10px;
+    z-index: 420;
 }
 #openChatButton:hover{
     cursor: pointer;
     background-color: #3d5cc8;
 }
-hr {
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ffffff;
-}
+
 .ScrollStyle::-webkit-scrollbar {
     width: 0.6em;
 }

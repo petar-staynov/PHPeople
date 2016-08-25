@@ -1,6 +1,5 @@
 
 <input type="text" id="uname" placeholder="Username"/>
-<div id="openChatButton">Open Public Chat</div>
 <div id="ChatContainer">
     <div id="chatLogs" align="center" class="ScrollStyle">
         <img id="loadingChatImage" src="loading.gif">
@@ -14,4 +13,3 @@
         </form>
     </div>
 </div>
-<div id="closeChatButton">X</div>
