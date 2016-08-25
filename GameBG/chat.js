@@ -44,21 +44,17 @@ $(document).ready(function () {
         $("#chatLogs").mouseenter(function () {
             clearInterval(intervalScrollingBox);
         });
-        //close the whole Chat and renew our hiddenChat var to True;
-        $("#closeChatButton").click(function () {
-            h = $("#ChatContainer").height();
-            $('#ChatContainer').animate({ opacity: 0, height: 300 }, 'slow');
-            $(this).fadeOut('fast');
-            $("#openChatButton").fadeIn('fast');
-            hiddenChat = true;
+
+
+        $("#chat-button").click(function () {
+            if (hiddenChat){
+                $("#ChatContainer").animate({opacity: 1, height: h}, 'slow');
+                hiddenChat = false;
+            }else{
+                h = $("#ChatContainer").height();
+                $('#ChatContainer').animate({ opacity: 0, height: 300 }, 'slow');
+                hiddenChat = true;
+            }
         });
     }
-    //open the whole Chat and renew our hiddenChat var to False;
-    $("#openChatButton").click(function () {
-            $("#ChatContainer").animate({opacity: 1, height: h}, 'slow');
-            $("#closeChatButton").fadeIn('fast');
-            $("#openChatButton").fadeOut('fast');
-            hiddenChat = false;
-    });
-
 });
