@@ -37,6 +37,10 @@ header {
 	font-weight: 400;
 	border: none;
 	background: #098FE3; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left bottom, #098FE3, #074870); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right bottom, #098FE3, #074870); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right bottom, #098FE3, #074870); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right bottom, #098FE3, #074870); /* Standard syntax */
 	position: fixed;
 	z-index: 9999;
 	top: 0;
@@ -66,7 +70,7 @@ nav ul div .menu-link:hover {
 }
 nav ul div a li {
 	display: inline;
-	padding: 10px 60px;
+	padding: 10px 50px;
 	transition: 0.4s;
 }
 .active {
@@ -456,7 +460,6 @@ footer .footer-1 .footer-col div span {
 
 footer .footer-2 {
 	width: 100%;
-	height: f0px;
 	background-color: #098FE3; /* For browsers that do not support gradients */
 	 background: -webkit-linear-gradient(left bottom, #098FE3, #074870); /* For Safari 5.1 to 6.0 */
 	 background: -o-linear-gradient(right bottom, #098FE3, #074870); /* For Opera 11.1 to 12.0 */
@@ -468,7 +471,7 @@ footer .footer-2 {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	height: 10%;
+	height: 5%;
 }
 footer .footer-2 .footer-2-container {
 	height: 100px;

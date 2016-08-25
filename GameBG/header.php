@@ -180,6 +180,9 @@ ob_start();
             <div>
                 <a href="Chat.php" id="login-menu" class="menu-link"><li>Chat</li></a>
             </div>
+            <div>
+                <a href="forum.php" id="login-menu" class="menu-link"><li>Forum</li></a>
+            </div>
             <div class="menu-div">
                 <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
                 <div class="dropdown">
