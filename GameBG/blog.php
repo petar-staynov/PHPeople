@@ -34,7 +34,6 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 	foreach($statement as $post) :
 		$userstatement = $connection->query('SELECT * FROM users WHERE users.user_id = '.$post['author_id'].'');
 		$user = $userstatement->fetch_assoc();?>
-		?>
 		<tr>
 			<td><?=$post['id']?></td>
 			<td><?=htmlspecialchars($post['title'])?></td>
