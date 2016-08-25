@@ -27,17 +27,21 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 		<th>Content</th>
 		<th>Date</th>
 		<th>Tag</th>
-		<th>Author ID</th>
+		<th>Author</th>
 		<th>Action</th>
 	</tr>
-	<?php foreach($statement as $post) :?>
+	<?php 
+	foreach($statement as $post) :
+		$userstatement = $connection->query('SELECT * FROM users WHERE users.user_id = '.$post['author_id'].'');
+		$user = $userstatement->fetch_assoc();?>
+		?>
 		<tr>
 			<td><?=$post['id']?></td>
 			<td><?=htmlspecialchars($post['title'])?></td>
 			<td><?=cutLongText($post['content'])?></td>
 			<td><?=htmlspecialchars($post['date'])?></td>
 			<td><?=htmlspecialchars($post['tag'])?></td>
-			<td><?=$post['author_id']?></td>
+			<td><?=htmlspecialchars($user['username'])?></td>
 			<td><a href="details.php?id=<?=$post['id']?>" name="details">[Details]</a></td>
 			<?php
 			if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
