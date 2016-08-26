@@ -1,5 +1,4 @@
 
-<input type="text" id="uname" placeholder="Username"/>
 <div id="ChatContainer">
     <div id="chatLogs" align="center" class="ScrollStyle">
         <img id="loadingChatImage" src="loading.gif">

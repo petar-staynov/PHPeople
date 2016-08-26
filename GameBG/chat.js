@@ -1,16 +1,14 @@
 function submitChat() {
     //check if both UserName and ChatBox have been filled out;
-    if (document.getElementById('uname').value == '' || document.getElementById('msg').value == ''){
+    if (document.getElementById('msg').value == ''){
         alert("Type your Username AND your message!");
         return true;
     }
     //lock in your userName;
-    document.getElementById('uname').readOnly = true;
     //establish a new http connection and open insert.php with the current uname and msg;
-    let uname = document.getElementById('uname').value;
     let msg = document.getElementById('msg').value;
     let xmlhttp = new XMLHttpRequest();
-    xmlhttp.open('GET','insert.php?uname='+uname+'&msg='+msg,true);
+    xmlhttp.open('GET','insert.php?&msg='+msg,true);
     xmlhttp.send();
     //empty messageBox;
     $('#msg').val('');

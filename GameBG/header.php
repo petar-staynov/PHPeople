@@ -1,4 +1,7 @@
 <?php
+include_once 'chat.php';
+?>
+<?php
 session_start();
 ob_start();
 ?>
@@ -178,9 +181,6 @@ ob_start();
                 </div>
             </div>
             <div class="menu-div">
-                <a href="#" id="chat-button" class="menu-link"><li>Chat</li></a>
-            </div>
-            <div class="menu-div">
                 <a href="forum.php" class="menu-link"><li>Forum</li></a>
             </div>
             <div class="menu-div">
@@ -199,6 +199,9 @@ ob_start();
             <?php } ?>
             <div class="menu-div">
                 <a href="about.php" class="menu-link"><li>About</li></a>
+            </div>
+            <div class="menu-div">
+                <a href="#" id="chat-button" class="menu-link"><li>Chat</li></a>
             </div>
         </ul>
     </nav>
