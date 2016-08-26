@@ -181,7 +181,7 @@ ob_start();
                 <a href="#" id="chat-button" class="menu-link"><li>Chat</li></a>
             </div>
             <div class="menu-div">
-                <a href="forum.php" class="menu-link"><li>Forum</li></a>
+                <a href="forum/forum_main.php" class="menu-link"><li>Forum</li></a>
             </div>
             <div class="menu-div">
                 <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
