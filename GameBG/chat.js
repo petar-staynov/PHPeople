@@ -23,10 +23,9 @@ function submitChat() {
 }
 $(document).ready(function () {
     $.ajaxSetup({cache:false});
-    var hiddenChat = false;
+    var hiddenChat = true;
     $("#openChatButton").hide();
     var h;
-    if (!hiddenChat){
         //if open Chat button is clicked ---> then load logs.php;
         var intervalLoadingLogs = setInterval(function () {
             $('#chatLogs').load('logs.php');
@@ -46,15 +45,17 @@ $(document).ready(function () {
         });
 
 
-        $("#chat-button").click(function () {
+        $("#chat-button").click(function (e) {
+            e.preventDefault();
             if (hiddenChat){
-                $("#ChatContainer").animate({opacity: 1, height: h}, 'slow');
-                hiddenChat = false;
+                $("#ChatContainer").animate({opacity: 1, height: 500}, 'slow', function () {
+                    hiddenChat = false;
+                });
             }else{
                 h = $("#ChatContainer").height();
-                $('#ChatContainer').animate({ opacity: 0, height: 300 }, 'slow');
-                hiddenChat = true;
+                $('#ChatContainer').animate({ opacity: 0, height: 300 }, 'slow', function () {
+                    hiddenChat = true;
+                });
             }
         });
-    }
 });
