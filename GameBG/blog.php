@@ -1,10 +1,7 @@
 <?php
 $title = "Blog";
 include_once 'header.php';
-if(!isset($_SESSION))
-{
-	session_start();
-}
+session_start();
 ?>
 
 <?php
