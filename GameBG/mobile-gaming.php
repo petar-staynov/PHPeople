@@ -1,7 +1,10 @@
 <?php
 $title = "Mobile Gaming";
 include_once 'header.php';
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 ?>
 <?php
 require_once('connection.php');
