@@ -16,7 +16,13 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
+    $counter = 0;
     while($row = $result->fetch_assoc()) {
-        echo "* " . $row["username"] . ": " . $row["msg"] . "<br>";
+        if ($counter % 2 == 0){
+            echo "<span style='color:#c4f7ff;'>" . "* " . $row["username"]. ": " . $row["msg"] . "</span>" . "<br>";
+        }else {
+            echo "<span style='color:white;'>" . "* " . $row["username"] . ": " . $row["msg"] . "</span>" . "<br>";
+        }
+        $counter ++;
     }
 }

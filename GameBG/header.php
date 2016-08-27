@@ -171,7 +171,7 @@ ob_start();
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                        <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1 ||isset($_SESSION['user_level']) && $_SESSION['user_level'] == 2) { ?>
+                        <?php if ($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
                             <li><a href="create-post.php">Create Post</a></li>
                         <?php } ?>
                     </ul>
@@ -181,7 +181,7 @@ ob_start();
                 <a href="#" id="chat-button" class="menu-link"><li>Chat</li></a>
             </div>
             <div class="menu-div">
-                <a href="forum.php" class="menu-link"><li>Forum</li></a>
+                <a href="forum/forum_main.php" class="menu-link"><li>Forum</li></a>
             </div>
             <div class="menu-div">
                 <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
