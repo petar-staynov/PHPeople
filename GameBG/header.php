@@ -171,7 +171,7 @@ ob_start();
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                        <?php if ($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
+                        <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1 || isset($_SESSION['user_level']) && $_SESSION['user_level'] == 2) { ?>
                             <li><a href="create-post.php">Create Post</a></li>
                         <?php } ?>
                     </ul>
