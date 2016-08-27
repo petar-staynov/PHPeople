@@ -26,6 +26,7 @@
 			$_SESSION['username'] = $username;
 			$_SESSION['loggedin'] = true;
 			header('Location: index.php');
+			$_SESSION['user_level'] = $row['user_level'];
 		}
 	}
 ?>

@@ -5,7 +5,7 @@ include_once 'connection.php';
 session_start();
 ?>
 <?php
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) {
     $id = $_GET['id'];
     $statement = $connection->query('SELECT * FROM posts WHERE id = '.$id.'');
     $row = $statement->fetch_assoc();

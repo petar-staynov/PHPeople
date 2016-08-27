@@ -5,7 +5,7 @@ include_once 'connection.php';
 session_start();
 ?>
 <?php
-if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
+if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
     <html>
     <head>
         <meta charset="UTF-8">
