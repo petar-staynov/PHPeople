@@ -2,7 +2,10 @@
 $title = "Create Post";
 include_once 'header.php';
 include_once 'connection.php';
-session_start();
+if(!isset($_SESSION))
+{
+    session_start();
+}
 ?>
 <?php
 if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>

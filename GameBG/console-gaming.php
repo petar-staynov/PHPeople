@@ -1,8 +1,10 @@
 <?php
 $title = "Console Gaming";
 include_once 'header.php';
-session_start();
-?>
+if(!isset($_SESSION))
+{
+    session_start();
+}?>
 <?php
 require_once('connection.php');
 $statement = $connection->query('SELECT * FROM posts WHERE posts.tag = "CONSOLE GAMING" ORDER BY date DESC');

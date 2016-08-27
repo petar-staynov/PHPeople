@@ -2,8 +2,10 @@
 $title = "Details";
 include_once 'header.php';
 include_once 'connection.php';
-session_start();
-?>
+if(!isset($_SESSION))
+{
+    session_start();
+}?>
 <?php
 $id = $_GET['id'];
 $statement = $connection->query('SELECT * FROM posts WHERE id = '.$id.'');

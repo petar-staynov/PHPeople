@@ -2,8 +2,10 @@
 $title = "Edit";
 include_once 'header.php';
 include_once 'connection.php';
-session_start();
-?>
+if(!isset($_SESSION))
+{
+    session_start();
+}?>
 <?php
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $id = $_GET['id'];
