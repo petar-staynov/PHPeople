@@ -86,20 +86,25 @@
 ::-webkit-input-placeholder {
    color: #48F7D1;
    font-size: 14px;
+   font-style: italic;
 }
 
 :-moz-placeholder { /* Firefox 18- */
    color: #48F7D1;
    font-size: 14px;
+   font-style: italic;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #48F7D1;
+   font-size: 14px;
+   font-style: italic;
 }
 
 :-ms-input-placeholder {  
    color: #48F7D1;
    font-size: 14px;
+   font-style: italic;
 }
 .error {
 	color:#E95757;
@@ -132,6 +137,11 @@ header div {
 }
 header div h2 span {
 	color: #098FE3;
+}
+.page-name {
+	text-align: left;
+	float: left;
+	margin-left: 300px;
 }
 .sidebar {
 	font-family: 'Lato', sans-serif;
@@ -192,22 +202,27 @@ header div h2 span {
 	width: 100%;
 	padding: 5px 2px;
 }
-::-webkit-input-placeholder {
+.game-form form label {
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+}
+.game-form ::-webkit-input-placeholder {
    color: black;
    font-style: italic;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+.game-form :-moz-placeholder { /* Firefox 18- */
    color: black;
    font-style: italic; 
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+.game-form ::-moz-placeholder {  /* Firefox 19+ */
    color: black; 
    font-style: italic; 
 }
 
-:-ms-input-placeholder {  
+.game-form :-ms-input-placeholder {  
    color: black;  
    font-style: italic;
 }
@@ -217,7 +232,71 @@ header div h2 span {
 	padding: 5px 2px;
 }
 .game-form form select {
+	display: block;
 	width: 15%;
+	margin-top: 10px;
 	padding: 5px;
 	font-size: 18px;
+}
+
+
+
+
+
+/*
+
+
+	GAMES PAGE
+
+
+*/
+.games-holder {
+	width: 85%;
+	margin: 100px 0 0 auto;
+}
+.single-game {
+	width: 20%;
+	float: left;
+	margin-bottom: 20px;
+}
+.game-holder {
+	width: 90%;
+	margin: 0 auto;
+	background-color: #098FE3;
+}
+.game-holder .image-container {
+	width: 90%;
+	height: 340px;
+	margin: 0 auto;
+}
+.game-holder .image-container img {
+	padding-top: 10px;
+	width: 100%;
+	height: 100%;
+}
+.game-holder h1 {
+	text-align: center;
+	padding: 20px 0 10px 0;
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+.game-holder a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 5px 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+}
+
+/*
+
+
+	OTHER	
+
+
+*/
+.clearfix {
+	clear: both;
 }

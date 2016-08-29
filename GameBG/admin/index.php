@@ -1,10 +1,12 @@
 <?php 
+	$title = "Admin";
+	$page = "Добави игра";
 	include_once 'header.php';
 ?>
-	<div class="margin-help"></div>
 	<?php  
 		include_once 'sidebar.php';
 	?>
+	<div class="margin-help"></div>
 
 	<div class="game-form">
 		<h1>Добави игра</h1>
@@ -15,16 +17,19 @@
 				<input type="text" name="game" placeholder="Име на играта">
 			</div>
 			<div>
-				<input type="file" name="game-img">
+				<label for="game-img">Снимка на играта</label>
+				<input type="file" name="game-img" id="game-img"> 
 			</div>
 			<div>
 				<textarea name="game-desc" placeholder="Описание на играта"></textarea>
 			</div>
 			<div>
-				<select name="device">
-					<option value="PC">PC</option>
-					<option value="Playstation">Playstation</option>
-					<option value="Xbox">Xbox</option>
+				<label for="device">Избери платформа</label>
+				<select name="device" id="device">
+					<option value="all">Всички</option>
+					<option value="pc">PC</option>
+					<option value="playstation">Playstation</option>
+					<option value="xbox">Xbox</option>
 				</select>
 			</div>
 			<div>

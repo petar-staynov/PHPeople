@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	require 'connection.php';
 
 	if (isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password'])) {
@@ -29,10 +30,12 @@
 			$sql = 'INSERT INTO users (email, username, password, date_registered) VALUES ("'.$email.'", "'.$username.'", "'.$password.'", NOW())';
 			
 			if (!mysqli_query($connection, $sql)) {
-				header('Location: login-form.php?reg-error=1');
+				header('Location: index.php?reg-error=1');
 			}
 
 			else {
+				$_SESSION["username"] = $username;
+				$_SESSION["loggedin"] = true;
 				header('Location: index.php');
 			}
 		}

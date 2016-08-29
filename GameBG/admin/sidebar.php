@@ -1,11 +1,9 @@
 <div class="sidebar">
-	<h1>GameBG</h1>
+	<h1><a href="../index.php">GameBG</a></h1>
 	<hr>
 
 	<ul>
-		<a href=""><li class="active">Добави игра</li></a>
-		<a href=""><li>Игри</li></a>
-		<a href=""><li>Нещо друго</li></a>
-		<a href=""><li>Нешо друго</li></a>
+		<a href="index.php"><li>Добави игра</li></a>
+		<a href="games.php"><li>Игри</li></a>
 	</ul>
 </div>

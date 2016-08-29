@@ -11,24 +11,37 @@
 
 <div class="game-wrapper">
 	<!-- Devices -->
-	<div class="single-device">
-		<p>All</p>
+	<a href="games.php?play=all"><div class="single-device">
+		<p>Всичко</p>
 	</div>
-	<div class="single-device">
+	</a>
+	<a href="games.php?play=pc"><div class="single-device">
 		<p>PC</p>
 	</div>
-	<div class="single-device">
+	</a>
+	<a href="games.php?play=playstation"><div class="single-device">
 		<p>Playstation</p>
 	</div>
-	<div class="single-device last">
+	</a>
+	<a href="games.php?play=xbox"><div class="single-device last">
 		<p>Xbox</p>
 	</div>
+	</a>
 	<div class="clearfix"></div>
 	<!-- Games -->
 	<?php 
 		require 'connection.php';
 
-		$sqlCheck = 'SELECT * FROM games';
+		if (isset($_GET['play'])) {
+			$play = $_GET['play'];
+
+			$sqlCheck = 'SELECT * FROM games WHERE device = "'.$play.'" OR device = "all"';
+		}
+
+		else {
+			$sqlCheck = 'SELECT * FROM games';
+		}
+		
 		$queryCheck = mysqli_query($connection, $sqlCheck);
 		$allRows = mysqli_num_rows($queryCheck);
 		$pages = ceil($allRows / 12);
@@ -43,7 +56,21 @@
 
 		$start_from = ($page - 1) * 12;
 
-		$sql = "SELECT * FROM games LIMIT $start_from, 12";
+		if (isset($_GET['play'])) {
+			$play = $_GET['play'];
+
+			if ($play != "all") {
+				$sql = 'SELECT * FROM games WHERE device = "'.$play.'" OR device = "all" LIMIT '.$start_from.', 12';
+			}
+
+			else {
+				$sql = "SELECT * FROM games LIMIT $start_from, 12";
+			}
+		}
+
+		else {
+			$sql = "SELECT * FROM games LIMIT $start_from, 12";
+		}
 
 		$query = mysqli_query($connection, $sql);
 

@@ -202,6 +202,13 @@ ob_start();
             </div>
         </ul>
     </nav>
+    <?php 
+        if (isset($_SESSION['loggedin'])) { ?>
+            <div class="header-username">
+                <a href="user-profile.php?username=<?= $_SESSION["username"]; ?>"><p><?= $_SESSION['username']; ?></p></a>
+            </div>  
+<?php    }
+    ?>
 </header>
 <div class="form-bg login-form">
 	<div class="forms-container">
@@ -278,4 +285,6 @@ ob_start();
 			</div>
 		</div>
 	</div>
+</div>
+<div class="header-margin">
 </div>
