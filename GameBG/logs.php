@@ -19,9 +19,9 @@ if ($result->num_rows > 0) {
     $counter = 0;
     while($row = $result->fetch_assoc()) {
         if ($counter % 2 == 0){
-            echo "<span style='color:#c4f7ff;'>" . "* " . $row["username"]. ": " . $row["msg"] . "</span>" . "<br>";
+            echo "<span style='color:#c4f7ff;'>" . "* " . "[" . $row["username"]. "]: " . $row["msg"] . "</span>" . "<br>";
         }else {
-            echo "<span style='color:white;'>" . "* " . $row["username"] . ": " . $row["msg"] . "</span>" . "<br>";
+            echo "<span style='color:white;'>" . "* " . '[' . $row["username"] . "]: " . $row["msg"] . "</span>" . "<br>";
         }
         $counter ++;
     }
