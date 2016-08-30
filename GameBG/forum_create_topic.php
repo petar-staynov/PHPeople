@@ -1,6 +1,6 @@
 <?php
 $title = "Create Topic";
-include 'forum-header.php';
+include 'forum_main.php';
 ?>
 
 <?php
@@ -32,16 +32,18 @@ else
             else
             {
                 echo '<form method="post" action="">
-                       Subject: <input type="text" name="topic_subject" />
-                       Category:';
+                       Subject: <br />
+                       <input type="text" name="topic_subject" /><br />
+                       Category:<br />';
 
-                echo '<select name="topic_cat">';
+                echo '<select name="topic_cat"><br />';
                 while($row = mysqli_fetch_assoc($result))
                 {
                     echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
                 }
-                echo '</select>';
-                echo 'Message: <textarea name="post_content" /></textarea>
+                echo '</select><br />';
+                echo 'Message: <br />
+                        <textarea name="post_content" /></textarea><br />
                       <input type="submit" value="Create topic" />
                       </form>';
             }

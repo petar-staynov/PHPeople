@@ -45,7 +45,7 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
         <h2 class="home-title">Най-популярни игри (показва 3)</h2>
         <div class="home-get-games">
             <?php
-            
+
             if (isset($_GET['play'])) {
                 $play = $_GET['play'];
 
