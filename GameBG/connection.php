@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect('localhost', 'Djimi', 'rounders', 'gamebg');
+$connection = mysqli_connect('localhost', 'root', '', 'gamebg');
 
     if (!$connection) {
     die('Something went wrong');
