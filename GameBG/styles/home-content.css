@@ -7,8 +7,16 @@
 .home-content-container{
     display: block;
     text-align: center;
-    margin-left: 153px;
-    margin-right: 153px;
+    margin-left: 170px;
+    margin-right: 170px;
     margin-top: -6px;
     background-color: #098FE3;
+}
+
+table, tr{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+td {
+    border: 1px solid black;
 }
