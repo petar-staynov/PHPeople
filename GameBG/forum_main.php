@@ -1,6 +1,7 @@
 <?php
-$title = "Forum";
+$title = "GameBG Forum";
 include_once 'header.php';
+include 'forum_connect.php';
 ?>
 
 <link rel="stylesheet" href="styles/forum-style.css" type="text/css">
@@ -35,7 +36,6 @@ include_once 'header.php';
     </div>
     <div class="forum-content">
         <?php
-        require 'forum_connect.php';
         $sql = "SELECT cat_id, cat_name, cat_description FROM forum_categories";
 
         $result = mysqli_query($con, $sql);
@@ -58,16 +58,37 @@ include_once 'header.php';
                 <th>Last topic</th>
               </tr>';
 
-                //TODO FIX THIS
+//                draws topics
                 while($row = mysqli_fetch_assoc($result))
                 {
                     echo '<tr>';
                     echo '<td class="leftpart">';
-                    echo '<h3><a href="forum_category.php?id=' . $row['cat_id'] . '">' . $row['cat_name']  .'</a><h3>';
-                    echo '<a class="forum-cat-desc">' . $row['cat_description'] . '</a>';
+                    echo '<h3><a href="forum_category.php?id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
                     echo '</td>';
                     echo '<td class="rightpart">';
-                    echo '<a href="forum_topic.php?id="> TOPIC NAME </a> DATE';
+
+                    //get the last topic for each category
+                    $topicsql = "SELECT topic_id, topic_subject, topic_date, topic_cat
+								FROM forum_topics WHERE topic_cat = " . $row['cat_id'] . " ORDER BY topic_date DESC LIMIT 1";
+
+                    $topicsresult = mysqli_query($con, $topicsql);
+
+                    if(!$topicsresult)
+                    {
+                        echo 'Last topic could not be displayed.';
+                    }
+                    else
+                    {
+                        if(mysqli_num_rows($topicsresult) == 0)
+                        {
+                            echo 'no topics';
+                        }
+                        else
+                        {
+                            while($topicrow = mysqli_fetch_assoc($topicsresult))
+                                echo '<a href="topic.php?id=' . $topicrow['topic_id'] . '">' . $topicrow['topic_subject'] . '</a> at ' . date('d-m-Y', strtotime($topicrow['topic_date']));
+                        }
+                    }
                     echo '</td>';
                     echo '</tr>';
                 }

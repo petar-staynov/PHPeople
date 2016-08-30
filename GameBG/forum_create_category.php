@@ -1,5 +1,4 @@
 <?php
-$title = "Create Category";
 include 'forum_main.php';
 ?>
 

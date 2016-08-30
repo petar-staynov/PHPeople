@@ -1,7 +1,7 @@
 <?php
-//create_cat.php
 include 'forum_connect.php';
 include 'header.php';
+include 'forum_main.php';
 
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
@@ -15,15 +15,8 @@ else
     }
     else
     {
-        $sql = "INSERT INTO 
-					forum_posts(post_content,
-						  post_date,
-						  post_topic,
-						  post_by) 
-				VALUES ('" . $_POST['reply-content'] . "',
-						NOW(),
-						" . mysqli_real_escape_string($con, $_GET['id']) . ",
-						" . $_SESSION['user_id'] . ")";
+        $sql = "INSERT INTO forum_posts(post_content, post_date, post_topic, post_by) 
+				VALUES ('" . $_POST['reply-content'] . "', NOW(), " . mysqli_real_escape_string($con, $_GET['id']) . ", " . $_SESSION['user_id'] . ")";
 
         $result = mysqli_query($con, $sql);
 
@@ -33,7 +26,7 @@ else
         }
         else
         {
-            echo 'Your reply has been saved, check it <a href="forum_topic.php?id=' . htmlentities($_GET['id']) . '">HERE</a>.';
+            echo 'Your reply has been saved, check it <a href="forum_topic.php?id=' . htmlentities($_GET['id']) . '">HERE</a>. <br>';
         }
     }
 }
