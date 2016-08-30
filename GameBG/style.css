@@ -260,7 +260,7 @@ header .header-username:hover {
 
 */
 .home-page{
-	background-image: url("images/home-page.jpg");
+	background-image: url("images/home-games.jpg");
 	background-size: 100% 100vh;
 	background-repeat: no-repeat;
 }
@@ -561,6 +561,7 @@ td{
 }
 th{
 	font-size: 20px;
+
 }
 input{
 	font-size: 20px;
