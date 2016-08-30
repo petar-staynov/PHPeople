@@ -183,32 +183,52 @@ ob_start();
             <div class="menu-div">
                 <a href="forum_main.php" class="menu-link"><li>Forum</li></a>
             </div>
-            <div class="menu-div">
-                <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
-                <div class="dropdown">
-                    <ul>
-                        <li class="sign-in"><p>Sign in</p></li>
-                        <li class="register"><p>Register</p></li>
-                    </ul>
-                </div>
-            </div>
-            <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) { ?>
-                <div class="menu-div">
-                    <a href="logout.php" id="login-menu" class="menu-link"><li>Logout</li></a>
-                </div>
-            <?php } ?>
+<!--            --><?php //if (!isset($_SESSION['loggedin'])) { ?>
+<!--            <div class="menu-div">-->
+<!--                <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>-->
+<!--                <div class="dropdown">-->
+<!--                    <ul>-->
+<!--                        <li class="sign-in"><p>Sign in</p></li>-->
+<!--                        <li class="register"><p>Register</p></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            --><?php //} ?>
+
+
+            <?php
+            if (!isset($_SESSION['loggedin']))
+            {
+                echo '<div class="menu-div">
+                        <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
+                        <div class="dropdown">
+                            <ul>
+                             <li class="sign-in"><p>Sign in</p></li>
+                             <li class="register"><p>Register</p></li>
+                            </ul>
+                        </div>
+                      </div>';
+            }
+            else if ((isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true))
+            {
+                echo '<div class="menu-div">
+                        <a href="logout.php" id="login-menu" class="menu-link"><li>Logout</li></a>
+                      </div>';
+            }
+            ?>
             <div class="menu-div">
                 <a href="about.php" class="menu-link"><li>About</li></a>
             </div>
+            <?php
+            if (isset($_SESSION['loggedin'])) { ?>
+                <div class="menu-div-username">
+                    <a href="user-profile.php?username=<?= $_SESSION["username"]; ?>"><li><?= $_SESSION['username']; ?></li></a>
+                </div>
+            <?php    }
+            ?>
         </ul>
     </nav>
-    <?php 
-        if (isset($_SESSION['loggedin'])) { ?>
-            <div class="header-username">
-                <a href="user-profile.php?username=<?= $_SESSION["username"]; ?>"><p><?= $_SESSION['username']; ?></p></a>
-            </div>  
-<?php    }
-    ?>
+
 </header>
 <div class="form-bg login-form">
 	<div class="forms-container">
@@ -286,5 +306,4 @@ ob_start();
 		</div>
 	</div>
 </div>
-<div class="header-margin">
-</div>
+<div class="header-margin"></div>

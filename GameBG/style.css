@@ -47,7 +47,7 @@ header {
 }
 header nav {
 	text-align: center;
-	width: 80%;
+	width: 100%;
 	float: left;
 }
 nav ul {
@@ -116,6 +116,7 @@ nav ul .menu-div .dropdown {
 	cursor: pointer;
 }
 header .header-username {
+	display: inline-block;
 	text-align: center;
 	color: white;
 	font-family: 'Lato', sans-serif;
@@ -124,6 +125,7 @@ header .header-username {
 	height: 44px;
 	float: right;
 	transition: background 0.30s ease-in-out;
+	background-color: rgba(0, 0, 0, 0.6);
 }
 header .header-username p {
 	padding-top: 7px;
