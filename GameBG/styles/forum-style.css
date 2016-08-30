@@ -3,6 +3,9 @@ body {
     text-align: center;         /* make sure IE centers the page too */
 }
 
+.a{
+    text-decoration: none;
+}
 .forum-wrapper {
     margin-left: 15%;
     margin-right: 15%;
@@ -116,8 +119,15 @@ h3 {margin: 0; padding: 0;}
     overflow: auto;
 }
 
+.forum-cat-desc{
+    font-size: medium;
+}
 .post-content {
     padding: 30px;
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: ;
 }
 
 textarea {

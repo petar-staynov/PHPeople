@@ -1,27 +1,26 @@
 <?php
 include 'forum-header.php';
 
-//first select the category based on $_GET['cat_id']
 require 'forum_connect.php';
-$sql = "SELECT cat_id, cat_name, cat_description FROM forum_categories WHERE cat_id = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
+$sql = "SELECT topic_id, topic_subjext FROM forum_topics WHERE topic_id = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
 $result = mysqli_query($con, $sql);
 
 if (!$result)
 {
-    echo 'Error displaying the category' . mysqli_error($con);
+    echo 'Error displaying the topic' . mysqli_error($con);
 }
 else
 {
     if (mysqli_num_rows($result) == 0)
     {
-        echo 'This category does not exist';
+        echo 'This topic does not exist';
     }
     else
     {
-        //Display category data
+        //Display topic data
         while ($row = mysqli_fetch_assoc($result))
         {
-            echo '<h2>Topics in ' . $row['cat_name'] . '</h2>';
+            echo '<h2>Topics in' . $row['cat_name'] . ' category </h2>';
         }
         //Do query for the topics
         $sql = "SELECT topic_id, topic_subject, topic_date, topic_cat FROM forum_topics WHERE topic_cat = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
