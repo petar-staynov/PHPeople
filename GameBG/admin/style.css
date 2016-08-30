@@ -319,6 +319,7 @@ header div a {
 	margin: 0 0 0 auto;
 	background-color: #2A2525;
 	border: 1px solid #098FE3;
+	position: relative;
 }
 .blog-container .single-post {
 	width: 90%;
@@ -383,4 +384,15 @@ header div a {
 .single-post-container p {
 	padding: 5px;
 	font-size: 24px;
+}
+.page-holder {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.page-holder a {
+	text-decoration: none;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
 }

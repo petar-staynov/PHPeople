@@ -15,6 +15,17 @@
 </div>
 
 <script>
+	if(window.location.href.indexOf("page") > -1) {
+       var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+	    pgurl = pgurl.split("?");
+	    pgurl = pgurl[1].split("=");
+	    pgurl = pgurl[1];
+    }
+
+    else {
+    	pgurl = 1;
+    }
+
 	function searchPosts(str) {
 
     	var xmlhttp = new XMLHttpRequest();
@@ -23,7 +34,7 @@
 	            document.getElementById("blog-container").innerHTML = xmlhttp.responseText;
 	        }
 	    };
-	    xmlhttp.open("GET", "search-posts.php?q=" + str, false);
+	    xmlhttp.open("GET", "search-posts.php?q=" + str + "&page="+pgurl, false);
 	    xmlhttp.send();  
 	}
 
