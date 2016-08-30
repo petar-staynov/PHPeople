@@ -1,11 +1,9 @@
 <?php
 $title = "Create Category";
-include 'forum_connect.php';
 include 'forum-header.php';
 ?>
 
-
-
+<!--THIS SHIT DOESN'T WORK-->
 <?php
 require 'forum_connect.php';
 
@@ -27,20 +25,17 @@ if (isset($_SESSION['loggedin'])
         $cat_name = $_POST['cat_name'];
         $cat_description = $_POST['cat_description'];
 
-        $sql = 'INSERT INTO forum_categories (cat_name, cat_description) 
-        VALUES ("'.$cat_name.'", "'.$cat_description.'"';
+        $sql = "INSERT INTO forum_categories(cat_name, cat_description)
+        VALUES ('$cat_name', '$cat_description')";
 
-    }
 
         $result = mysqli_query($con, $sql);
-        if (!$result)
-        {
-            echo 'Error' . mysqli_error();
-        }
-        else
-            {
+        if (!$result) {
+            echo 'Error' . mysqli_error($con);
+        } else {
             echo 'New category successfully added.';
         }
+    }
     }
 else
 {
