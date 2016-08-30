@@ -25,8 +25,7 @@ if (isset($_SESSION['loggedin'])
         $cat_name = $_POST['cat_name'];
         $cat_description = $_POST['cat_description'];
 
-        $sql = "INSERT INTO forum_categories(cat_name, cat_description)
-        VALUES ('$cat_name', '$cat_description')";
+        $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('$cat_name', '$cat_description')";
 
 
         $result = mysqli_query($con, $sql);
