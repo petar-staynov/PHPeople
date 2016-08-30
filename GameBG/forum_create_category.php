@@ -31,8 +31,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
                 $cat_description = $_POST['cat_description'];
 
 //          $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('$cat_name', '$cat_description')";
-                $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('" . mysqli_real_escape_string($con, $_POST['cat_name']) . "' , " . mysqli_real_escape_string($con, $_POST['cat_description']) . ")";
-
+                $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('$cat_name', '$cat_description')";
 
                 $result = mysqli_query($con, $sql);
                 if (!$result) {
