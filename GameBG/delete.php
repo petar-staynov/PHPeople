@@ -2,7 +2,6 @@
 $title = "Delete";
 include_once 'header.php';
 include_once 'connection.php';
-session_start();
 ?>
 <?php
 if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) {
