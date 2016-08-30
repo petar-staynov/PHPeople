@@ -21,29 +21,27 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 ?>
 <table>
 	<tr>
-		<th>ID</th>
-		<th>Title</th>
-		<th>Content</th>
-		<th>Date</th>
-		<th>Tag</th>
-		<th>Author</th>
-		<th>Action</th>
+		<th>Заглавие</th>
+		<th>Съдържание</th>
+		<th>Дата</th>
+		<th>Таг</th>
+		<th>Автор</th>
+		<th>Опции</th>
 	</tr>
 	<?php 
 	foreach($statement as $post) :
 		$userstatement = $connection->query('SELECT * FROM users WHERE users.user_id = '.$post['author_id'].'');
 		$user = $userstatement->fetch_assoc();?>
 		<tr>
-			<td><?=$post['id']?></td>
 			<td><?=htmlspecialchars($post['title'])?></td>
 			<td><?=cutLongText($post['content'])?></td>
 			<td><?=htmlspecialchars($post['date'])?></td>
 			<td><?=htmlspecialchars($post['tag'])?></td>
 			<td><?=htmlspecialchars($user['username'])?></td>
-			<td><a href="details.php?id=<?=$post['id']?>" name="details">[Details]</a></td>
+			<td><a href="details.php?id=<?=$post['id']?>" name="details">[Виж целия]</a></td>
 			<?php
-			if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-				if($post['author_id'] == $_SESSION['user_id'] && $_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) {?>
+			if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && !isset($_SESSION["admin"])){
+				if($post['author_id'] == $_SESSION['user_id']) {?>
 					<td><a href="edit.php?id=<?=$post['id']?>">[Edit]</a></td>
 					<td><a href="delete.php?id=<?=$post['id']?>">[Delete]</a></td>
 				<?php }

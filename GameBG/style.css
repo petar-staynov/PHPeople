@@ -81,6 +81,15 @@ nav ul div a li {
 nav ul .menu-div {
 	position: relative;
 }
+nav ul .menu-div-username {
+	float: right;
+}
+nav ul .menu-div-username a {
+	transition: background 0.45s ease-in-out;
+}
+nav ul .menu-div-username a:hover {
+	background: rgba(0, 0, 0, 0.6);
+}
 nav ul .menu-div .dropdown {
 	position: absolute;
 	width: 100%;

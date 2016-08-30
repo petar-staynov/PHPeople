@@ -157,10 +157,17 @@ ob_start();
                 <a href="games.php" class="menu-link"><li>Games</li></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="single-game.php?id=21">League of Legends</a></li>
-                        <li><a href="#">CS:GO</a></li>
-                        <li><a href="#">DOTA 2</a></li>
-                        <li><a href="#">Battlefield 1</a></li>
+                        <?php 
+                            require 'connection.php';
+
+                            $sql = 'SELECT * FROM games ORDER BY time_added DESC LIMIT 5';
+
+                            $query = mysqli_query($connection, $sql);
+
+                            while ($row = mysqli_fetch_assoc($query)) { ?>
+                                <li><a href="single-game.php?id=<?= $row['id'] ?>"><?= $row['game_title']; ?></a></li>
+                    <?php    }
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -171,7 +178,7 @@ ob_start();
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                        <?php if (isset($_SESSION['user_level']) && $_SESSION['user_level'] == 1 || isset($_SESSION['user_level']) && $_SESSION['user_level'] == 2) { ?>
+                        <?php if (isset($_SESSION["username"])) { ?>
                             <li><a href="create-post.php">Create Post</a></li>
                         <?php } ?>
                     </ul>
@@ -222,7 +229,7 @@ ob_start();
             <?php
             if (isset($_SESSION['loggedin'])) { ?>
                 <div class="menu-div-username">
-                    <a href="user-profile.php?username=<?= $_SESSION["username"]; ?>"><li><?= $_SESSION['username']; ?></li></a>
+                    <a href="user-profile.php?username=<?= $_SESSION["username"]; ?>"><li><?= $_SESSION["username"]; ?></li></a>
                 </div>
             <?php    }
             ?>

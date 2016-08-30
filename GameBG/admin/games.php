@@ -21,7 +21,7 @@
 						<img src="game-images/<?= $row['game_image']; ?>">
 					</div>
 					<h1><?= $row['game_title']; ?></h1>
-					<a href="update-game.php?id=<?= $row['id']; ?>">Редактирай</a>
+					<a href="../single-game.php?id=<?= $row['id']; ?>">Виж цялата</a>
 					<a href="delete-game.php?id=<?= $row['id']; ?>">Изтрий</a>
 				</div>
 			</div>
@@ -30,3 +30,5 @@
 	<div class="clearfix">
 	</div>
 </div>
+</body>
+</html>

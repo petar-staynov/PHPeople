@@ -5,6 +5,7 @@
 		$_SESSION["password"] = $_POST['password'];
 
 		if ($_SESSION["username"] == "gamebg" && $_SESSION["password"] == "test") {
+			$_SESSION["loggedin"] = true;
 			$_SESSION["admin"] = true;
 			header("Location: index.php");
 		}

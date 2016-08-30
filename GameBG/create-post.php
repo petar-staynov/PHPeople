@@ -8,7 +8,7 @@ if(!isset($_SESSION))
 }
 ?>
 <?php
-if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
+if($_SESSION["username"]) { ?>
     <html>
     <head>
         <meta charset="UTF-8">

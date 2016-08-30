@@ -13,22 +13,18 @@ $row = $statement->fetch_assoc();
 ?>
 <table>
     <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Content</th>
-        <th>Date</th>
-        <td>Tag</td>
-        <td>Author ID</td>
-        <th>Action</th>
+        <th>Залгавие</th>
+        <th>Съдържание</th>
+        <th>Дата</th>
+        <td>Таг</td>
+        <th>Опции</th>
     </tr>
         <tr>
-            <td><?=$row['id']?></td>
             <td><?=htmlspecialchars($row['title'])?></td>
-            <td><?=$row['content']?></td>
+            <td><?=htmlspecialchars($row['content'])?></td>
             <td><?=htmlspecialchars($row['date'])?></td>
             <td><?=htmlspecialchars($row['tag'])?></td>
-            <td><?=$row['author_id']?></td>
-            <td><a href="blog.php">[Back to Blog]</a></td>
+            <td><a href="blog.php">[Към блога]</a></td>
            <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
             if($row['author_id'] == $_SESSION['user_id'] && $_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) {?>
                 <?php

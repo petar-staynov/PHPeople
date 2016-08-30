@@ -34,7 +34,7 @@
         	echo "<p>Файлът НЕ успя да се качи, моля опитайте по-късно.</p>";
     	}
 
-    	$sql = 'INSERT INTO games (game_title, game_desc, game_image, device) VALUES ("'.$game.'", "'.$game_desc.'", "'.$uploadedFilename.'", "'.$device.'")';
+    	$sql = 'INSERT INTO games (game_title, game_desc, game_image, device, time_added) VALUES ("'.$game.'", "'.$game_desc.'", "'.$uploadedFilename.'", "'.$device.'", NOW())';
 
     	if (!mysqli_query($connection, $sql)) {
     		header("Location: index.php?uploaded=0");

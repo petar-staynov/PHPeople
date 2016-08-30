@@ -34,10 +34,10 @@
 		});
 	</script>
 </head>
-<body>
+<body onload="searchPosts('')">
 	<header>
 		<div>
 			<h2 class="page-name"><?= $page; ?></h2>
-			<h2>Добре дошъл <span>Admin</span><a href="logout.php">Изход</a</h2>
+			<h2>Добре дошъл <span>Admin</span></h2>
 		</div>
 	</header>
