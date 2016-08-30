@@ -307,3 +307,6 @@ ob_start();
 	</div>
 </div>
 <div class="header-margin"></div>
+<?php
+include_once 'chat.php';
+?>

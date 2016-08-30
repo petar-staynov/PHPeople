@@ -1,7 +1,4 @@
 <?php
-    include_once 'chat.php';
-?>
-<?php
     $title = "Games";
     include_once 'header.php';
 ?>
