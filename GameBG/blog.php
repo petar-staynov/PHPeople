@@ -40,11 +40,11 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 			<td><?=htmlspecialchars($user['username'])?></td>
 			<td><a href="details.php?id=<?=$post['id']?>" name="details">[Виж целия]</a></td>
 			<?php
-			if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && !isset($_SESSION["admin"])){
-				if($post['author_id'] == $_SESSION['user_id']) {?>
+			if(isset($_SESSION["admin"])){
+				?>
 					<td><a href="edit.php?id=<?=$post['id']?>">[Edit]</a></td>
 					<td><a href="delete.php?id=<?=$post['id']?>">[Delete]</a></td>
-				<?php }
+				<?php 
 			}?>
 		</tr>
 	<?php endforeach ?>

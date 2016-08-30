@@ -151,10 +151,10 @@ ob_start();
     <nav>
         <ul>
             <div class="menu-div">
-                <a href="index.php" class="menu-link"><li>Home</li></a>
+                <a href="index.php" class="menu-link"><li>Начало</li></a>
             </div>            
             <div class="menu-div">
-                <a href="games.php" class="menu-link"><li>Games</li></a>
+                <a href="games.php" class="menu-link"><li>Игри</li></a>
                 <div class="dropdown">
                     <ul>
                         <?php 
@@ -172,23 +172,23 @@ ob_start();
                 </div>
             </div>
             <div class="menu-div">
-                <a href="blog.php" id="blog-menu" class="menu-link"><li>Blog</li></a>
+                <a href="blog.php" id="blog-menu" class="menu-link"><li>Блог</li></a>
                 <div class="dropdown">
                     <ul>
                         <li><a href="pc-gaming.php">PC</a></li>
                         <li><a href="console-gaming.php">Console</a></li>
                         <li><a href="mobile-gaming.php">Mobile</a></li>
-                        <?php if (isset($_SESSION["username"])) { ?>
-                            <li><a href="create-post.php">Create Post</a></li>
+                        <?php if (isset($_SESSION["admin"])) { ?>
+                            <li><a href="create-post.php">Качи новина</a></li>
                         <?php } ?>
                     </ul>
                 </div>
             </div>
             <div class="menu-div">
-                <a href="#" id="chat-button" class="menu-link"><li>Chat</li></a>
+                <a href="#" id="chat-button" class="menu-link"><li>Чат</li></a>
             </div>
             <div class="menu-div">
-                <a href="forum_main.php" class="menu-link"><li>Forum</li></a>
+                <a href="forum_main.php" class="menu-link"><li>Форум</li></a>
             </div>
 <!--            --><?php //if (!isset($_SESSION['loggedin'])) { ?>
 <!--            <div class="menu-div">-->
@@ -207,11 +207,11 @@ ob_start();
             if (!isset($_SESSION['loggedin']))
             {
                 echo '<div class="menu-div">
-                        <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>
+                        <a href="#" id="login-menu" class="menu-link"><li>Акаунт</li></a>
                         <div class="dropdown">
                             <ul>
-                             <li class="sign-in"><p>Sign in</p></li>
-                             <li class="register"><p>Register</p></li>
+                             <li class="sign-in"><p>Влез</p></li>
+                             <li class="register"><p>Регистрирай се</p></li>
                             </ul>
                         </div>
                       </div>';
@@ -219,13 +219,10 @@ ob_start();
             else if ((isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true))
             {
                 echo '<div class="menu-div">
-                        <a href="logout.php" id="login-menu" class="menu-link"><li>Logout</li></a>
+                        <a href="logout.php" id="login-menu" class="menu-link"><li>Изход</li></a>
                       </div>';
             }
             ?>
-            <div class="menu-div">
-                <a href="about.php" class="menu-link"><li>About</li></a>
-            </div>
             <?php
             if (isset($_SESSION['loggedin'])) { ?>
                 <div class="menu-div-username">
@@ -241,7 +238,7 @@ ob_start();
 	<div class="forms-container">
 		<div class="form login">
 			<div class="login-form">
-				<h1>Sign in</h1>
+				<h1>Влез</h1>
 				<hr>
 
 				<form method="POST" action="login.php">
@@ -253,7 +250,7 @@ ob_start();
 							<input type="password" name="password" placeholder="Password">
 						</div>
 						<div class="login-submit">
-							<input type="submit" value="Sign in">
+							<input type="submit" value="Влез">
 						</div>
 						<?php 
 							if (isset($_GET['login-error'])) {
@@ -274,7 +271,7 @@ ob_start();
 	<div class="forms-container">
 		<div class="form register">
 			<div class="login-form">
-				<h1>Register</h1>
+				<h1>Регистрирай се</h1>
 				<hr>
 
 				<form id="registration-form" method="POST" action="register.php">
@@ -292,7 +289,7 @@ ob_start();
 							<input type="password" name="confirm_password" placeholder="Repeat password*">
 						</div>
 						<div class="submit">
-							<input type="submit" value="Register">
+							<input type="submit" value="Регистрирай се">
 						</div>
 						<?php 
 							if (isset($_GET['reg-error'])) {
