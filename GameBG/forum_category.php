@@ -49,7 +49,7 @@ else
                 {
                     echo '<tr>';
                     echo '<td class="leftpart">';
-                    echo '<h3><a href="topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a><h3>';
+                    echo '<h3><a href="forum_topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a><h3>';
                     echo '</td>';
                     echo '<td class="rightpart">';
                     echo date('d-m-Y', strtotime($row['topic_date']));
