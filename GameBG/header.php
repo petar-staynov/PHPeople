@@ -190,6 +190,9 @@ ob_start();
             <div class="menu-div">
                 <a href="forum_main.php" class="menu-link"><li>Форум</li></a>
             </div>
+            <div class="menu-div">
+                <a href="about.php" class="menu-link"><li>За нас</li></a>
+            </div>
 <!--            --><?php //if (!isset($_SESSION['loggedin'])) { ?>
 <!--            <div class="menu-div">-->
 <!--                <a href="#" id="login-menu" class="menu-link"><li>Account</li></a>-->
