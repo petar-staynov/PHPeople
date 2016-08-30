@@ -89,7 +89,7 @@ VALUES ('" . mysqli_real_escape_string($con, $_POST['post_content']) . "', NOW()
             {
                 $sql = "COMMIT;";
                 $result = mysqli_query($con, $sql);
-                echo 'You have created <a href="topic.php?id='. $topicid . '">your new topic</a>.';
+                echo 'You have created <a href="forum_topic.php?id='. $topicid . '">your new topic</a>.';
             }
         }
     }

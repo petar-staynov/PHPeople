@@ -130,6 +130,6 @@ a, a:visited, a:hover, a:active {
 }
 
 textarea {
-    width: 500px;
-    height: 200px;
+    width: 100%;
+    height: 20%;
 }

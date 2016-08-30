@@ -37,15 +37,14 @@ include_once 'header.php';
     <div class="forum-menu">
         <a class="item" href="forum_main.php">Forum Home</a> -
 
-        <!-- Shows Create topic and leave reply if logged in -->
+        <!-- Shows Create topic and if logged in -->
         <?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-            echo '<a class="item" href="forum_create_topic.php">Create Topic</a> - 
-                  <a class="item" href="forum_create_reply.php">Leave Reply</a> - ';
+            echo '<a class="item" href="forum_create_topic.php">Create Topic</a>';
 
-            if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2)
+            if(isset($_SESSION['user_level']) && $_SESSION['user_level'] != 0)
             {
-                echo '<a class="item-admin" href="forum_create_category.php">Create Category</a>';
+                echo ' - <a class="item-admin" href="forum_create_category.php">Create Category</a>';
             }
         }
         ?>

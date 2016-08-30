@@ -1,63 +1,96 @@
 <?php
+include 'forum_connect.php';
 include 'forum-header.php';
+?>
 
-require 'forum_connect.php';
-$sql = "SELECT topic_id, topic_subjext FROM forum_topics WHERE topic_id = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
+<div class="forum-wrapper">
+    <div class="forum-content">
+<?php
+
+$sql = "SELECT
+			topic_id,
+			topic_subject
+		FROM
+			forum_topics
+		WHERE
+			forum_topics.topic_id = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
+
 $result = mysqli_query($con, $sql);
 
-if (!$result)
+if(!$result)
 {
-    echo 'Error displaying the topic' . mysqli_error($con);
+    echo 'The topic could not be displayed, please try again later.' . mysqli_error($con);
 }
 else
 {
     if (mysqli_num_rows($result) == 0)
     {
-        echo 'This topic does not exist';
+        echo 'This topic does not exist.';
     }
     else
     {
-        //Display topic data
-        while ($row = mysqli_fetch_assoc($result))
+        while($row = mysqli_fetch_assoc($result))
         {
-            echo '<h2>Topics in' . $row['cat_name'] . ' category </h2>';
-        }
-        //Do query for the topics
-        $sql = "SELECT topic_id, topic_subject, topic_date, topic_cat FROM forum_topics WHERE topic_cat = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
-        $result = mysqli_query($con, $sql);
+            //display post data
+            echo '<table class="topic" border="1">
+					<tr>
+						<th colspan="2">' . $row['topic_subject'] . '</th>
+					</tr>';
 
-        if (!$result)
-        {
-            echo 'Error displaying the topics' . mysqli_error($con);
-        }
-        else
-        {
-            if (mysqli_num_rows($result) == 0)
+            //fetch the posts from the database
+            $posts_sql = "SELECT
+						forum_posts.post_topic,
+						forum_posts.post_content,
+						forum_posts.post_date,
+						forum_posts.post_by,
+						users.user_id,
+						users.username
+					FROM
+						forum_posts
+					LEFT JOIN
+						users
+					ON
+						forum_posts.post_by = users.user_id
+					WHERE
+						forum_posts.post_topic = '" . mysqli_real_escape_string($con, $_GET['id']) . "'";
+
+            $posts_result = mysqli_query($con, $posts_sql);
+
+            if(!$posts_result)
             {
-                echo 'There are no topics in this category';
+                echo '<tr><td>The posts could not be displayed, please try again later. ' . mysqli_error($con) . '<tr></td></table>';
             }
             else
             {
-                echo '<table border="1">
-                        <tr>
-                        <th>Topic</th>
-                        <th>Created on</th>
-                        </tr>';
 
-                while ($row = mysqli_fetch_assoc($result))
+                while($posts_row = mysqli_fetch_assoc($posts_result))
                 {
-                    echo '<tr>';
-                    echo '<td class="leftpart">';
-                    echo '<h3><a href="forum_topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a><h3>';
-                    echo '</td>';
-                    echo '<td class="rightpart">';
-                    echo date('d-m-Y', strtotime($row['topic_date']));
-                    echo '</td>';
-                    echo '</tr>';
+                    echo '<tr class="topic-post">
+							<td class="user-post">' . $posts_row['username'] . '<br/>' . date('d-m-Y H:i', strtotime($posts_row['post_date'])) . '</td>
+							<td class="post-content">' . htmlentities(stripslashes($posts_row['post_content'])) . '</td>
+						  </tr>';
                 }
             }
+
+            if (!isset($_SESSION['loggedin']))
+            {
+                echo '<tr><td colspan=2>Sign in to reply to this topic';
+            }
+            else
+            {
+                //draw reply box
+                echo '<tr><td colspan="2"><h2>Reply:</h2><br />
+					    <form method="post" action="forum_reply.php?id=' . $row['topic_id'] . '">
+						<textarea name="reply-content"></textarea><br /><br />
+						<input type="submit" value="Submit reply" />
+					</form></td></tr>';
+            }
+
+            //finish the table
+            echo '</table>';
         }
     }
 }
-include 'forum_footer.php';
-?>
+    ?>
+    </div>
+</div>
