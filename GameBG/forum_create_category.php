@@ -10,14 +10,13 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
     {
 //       displays the form
         echo '<form method="post" action="">
-            Category name: <br/>
-            <input type="text" name="cat_name" /><br/>
-            Category description: <br/>
+            Category name: <br />
+            <input type="text" name="cat_name" /><br />
+            Category description: <br />
             <textarea name="cat_description" /></textarea>
-            <br/>
+            <br /><br />
             <input type="submit" value="Add category" />
             </form>';
-        echo '<p style="margin-bottom: 20px">';
 
 //    Sends category forms text to DB
         if (isset($_POST["cat_name"]) && isset($_POST["cat_description"])) {
@@ -40,7 +39,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 else
 {
     echo 'YOU ARE NOT AN ADMIN, GET OUT';
-    echo '<p style="margin-bottom: 20px">';
 }
 
 

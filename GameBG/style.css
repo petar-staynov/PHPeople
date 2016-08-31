@@ -314,6 +314,125 @@ header .header-username:hover {
 	padding-top: 5px;
 	text-align: center;
 }
+
+
+
+
+/*
+
+
+
+	PROFILE
+
+
+
+
+*/
+.profile-wrapper {
+	width: 1280px;
+	height: 800px;
+	margin: 60px auto;
+	background-color: black;
+	border: 3px solid #098FE3;
+}
+.profile-wrapper h1 {
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 45px;
+	text-align: center;
+	padding: 10px 0; 
+}
+.profile-wrapper hr {
+	display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid #098FE3;
+    padding: 0;
+	width: 98%;
+	margin: 0 auto;
+}
+.profile-wrapper .profile-menu {
+	width: 90%;
+	height: 50px;
+	margin: 10px auto;
+}
+.profile-menu h1 {
+	font-size: 28px;
+}
+.profile-wrapper .profile-menu .profile-menu-div {
+	width: 48%;
+	background-color: #098FE3;
+}
+.profile-menu-div:first-child {
+	float: left;
+}
+.profile-menu-div:nth-child(2) {
+	float: right;
+}
+.profile-games-holder {
+	width: 48%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid #098FE3;
+	float: left;
+	margin-top: 5px;
+	overflow: scroll;
+}
+form h1 {
+	font-size: 24px !important;
+}
+form .add-game-title {
+	width: 80%;
+	margin: 5px auto;
+	background-color:#098FE3; 
+}
+form .add-game-input-div {
+	width: 50%;
+	margin: 10px auto;
+}
+form select {
+	width: 100%;
+}
+form input[type="submit"] {
+	display: block;
+	width: 40%;
+	margin: 10px auto;
+	color: white;
+	background-color: #098FE3;
+}
+.profile-menu ::-webkit-input-placeholder {
+   color: black;
+   font-size: 14px;
+   font-style: italic;
+}
+
+.profile-menu :-moz-placeholder { /* Firefox 18- */
+   color: black;
+   font-size: 14px;
+   font-style: italic;
+}
+
+.profile-menu ::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+   font-size: 14px;
+   font-style: italic;
+}
+
+.profile-menu :-ms-input-placeholder {  
+   color: black;
+   font-size: 14px;
+   font-style: italic;
+}
+.profile-menu .error {
+	color: white;
+}
+
+
+
+
+
+
+
 /*
 
 

@@ -11,7 +11,7 @@ include_once 'header.php';
         <!-- Shows Create topic and if logged in -->
         <?php
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-            echo ' - <a class="item" href="forum_create_topic.php">Create Topic</a>';
+            echo '<a class="item" href="forum_create_topic.php">Create Topic</a>';
 
             if(isset($_SESSION['user_level']) && $_SESSION['user_level'] != 0)
             {

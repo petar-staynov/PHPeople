@@ -16,17 +16,16 @@
 		$sql = 'SELECT * FROM users WHERE email = "'.$username.'" AND password = "'.$password.'" OR username = "'.$username.'" AND password = "'.$password.'"';
 		$result = mysqli_query($connection, $sql);
 		$row = mysqli_fetch_assoc($result);
-		$_SESSION['user_id'] = $row['user_id'];
-		if (!mysqli_query($connection, $sql)) {
+		if (!$result) {
 			header('Location: index.php?login-error=0');
 		}
 
 		else {
-			session_start();
 			$_SESSION['username'] = $username;
 			$_SESSION['loggedin'] = true;
-			header('Location: index.php');
+			$_SESSION['user_id'] = $row['user_id'];
 			$_SESSION['user_level'] = $row['user_level'];
+			header('Location: index.php');
 		}
 	}
 ?>
