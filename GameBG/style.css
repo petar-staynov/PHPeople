@@ -904,18 +904,28 @@ font-size: 20px;
     margin: 0 auto;
     text-align: center;
 }
-.news-title{
+.home-news-title{
     color: white;
     font-size: 32px;
     border-style: solid;
     border-bottom: none;
 }
-.news-title a, a:link, a:visited, a:focus, a:hover, a:active {
+.home-news-title a, a:link, a:visited, a:focus, a:hover, a:active {
     color: white;
     text-decoration: none;
 }
-.news-text{
+.home-news-text{
     border-style: solid;
     border-top: none;
     margin-bottom: 10px;
+}
+.forum-home-title{
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+    border-style: solid;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
 }

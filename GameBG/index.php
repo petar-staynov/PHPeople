@@ -36,8 +36,8 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
                     <?php
                     foreach($statement as $post) : ;?>
                         <a style="display:block" href="details.php?id=<?=$post['id']?>">
-                            <div class="news-title"><?=htmlspecialchars($post['title'])?></div>
-                            <div class="news-text"><?=cutLongText($post['content'])?></div>
+                            <div class="home-news-title"><?=htmlspecialchars($post['title'])?></div>
+                            <div class="home-news-text"><?=cutLongText($post['content'])?></div>
                         </a>
                     <?php endforeach ?>
         </div>
@@ -78,12 +78,25 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
     <div class="recent-forum-posts">
         <h2 class="home-title">Последни теми във форума</h2>
         <div class="home-get-forum">
-            <!-- Script that pulls latest forum posts -->
+            <?php
+            require 'forum_connect.php';
+            $sql = 'SELECT topic_id, topic_subject FROM forum_topics ORDER BY topic_date DESC LIMIT 3';
+            $query = mysqli_query($con, $sql);
+
+            while ($row = mysqli_fetch_assoc($query)) { ?>
+                <div class="home-forum-topic">
+                    <a style="display:block" href="forum_topic.php?id=<?=$row['topic_id']?>">
+                        <div class="forum-home-title"><?=htmlspecialchars($row['topic_subject'])?></div>
+                    </a>
+                </div>
+            <?php	}
+            ?>
         </div>
+        ?>
     </div>
 </div>
 </body>
 </html>
 <?php
-    include_once 'footer.php';
+include_once 'footer.php';
 ?>
