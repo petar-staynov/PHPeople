@@ -14,14 +14,18 @@ if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
         <meta charset="UTF-8">
         <title>Create Post</title>
     </head>
-    <body>
+    <body class="blog">
     <form method="post">
-        <h2>Title:</h2>
+        <h2 class="text-font">Заглавие:</h2>
+        <div class="forms">
         <input type="text" name="post_title"/>
-        <h2>Content:</h2>
-        <textarea name="post_content" rows="10"></textarea>
-        <h2>Tag:</h2>
-        <div>
+        </div>
+        <h2 class="text-font">Съдържание:</h2>
+        <div class="forms">
+            <textarea name="post_content" rows="10"></textarea>
+        </div>
+        <h2 class="text-font">Таг:</h2>
+        <div class="forms">
             <select name="tag">
                 <option value="PC GAMING">PC GAMING</option>
                 <option value="CONSOLE GAMING">CONSOLE GAMING</option>
@@ -29,8 +33,11 @@ if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
             </select>
         </div>
         <div class="buttons-size">
-            <input type="submit" VALUE="Create" name="create">
-            <a href="blog.php">[Cancel]</a>
+            <div class="forms">
+                <input type="submit" VALUE="Създай" name="create">
+                <a class="cancel-buttons" href="blog.php">[Откажи]</a>
+            </div>
+
         </div>
     </form>
     </body>

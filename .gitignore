@@ -1,6 +1,3 @@
-GameBG/connection.php
-GameBG/.idea/workspace.xml
-GameBG/.idea/sqldialects.xml
-GameBG/.idea/dataSources.local.xml
+*.iml
 *.ids
 *.xml
