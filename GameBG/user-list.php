@@ -4,9 +4,13 @@
 
 	require_once 'header.php';
 ?>
-
-
-<?php 
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" type="text/css">
+	</head>
+	<body class="blog">
+	<?php
 	if (isset($_GET['id'])) {
 		$id = $_GET['id'];
 
@@ -22,32 +26,32 @@
 				<h1>Потребителски имена в <?= $game ?></h1>
 			</div>
 
-			
 
-		<?php
 
-		$sql = 'SELECT * FROM game_users WHERE game = "'.$id.'"';
+			<?php
 
-		$query = mysqli_query($connection, $sql);
+			$sql = 'SELECT * FROM game_users WHERE game = "'.$id.'"';
 
-		while ($row = mysqli_fetch_assoc($query)) { ?>
-			<div class="single-user">
-				<div>
-					<p><?= $row['game_username'] ?></p>
+			$query = mysqli_query($connection, $sql);
+
+			while ($row = mysqli_fetch_assoc($query)) { ?>
+				<div class="single-user">
+					<div>
+						<p><?= $row['game_username'] ?></p>
+					</div>
 				</div>
-			</div>
-<?php	} ?>
-		
+			<?php	} ?>
+
 		</div>
 
-<?php	}
+	<?php	}
 
 	else {
 		header("Location: games.php");
 	}
-?>
-
-
+	?>
+	</body>
+	</html>
 <?php 
 	require_once 'footer.php';
 ?>
