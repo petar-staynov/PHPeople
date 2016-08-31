@@ -85,7 +85,7 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 
             while ($row = mysqli_fetch_assoc($query)) { ?>
                 <div class="home-forum-topic">
-                    <a style="display:block" href="forum_topic.php?id=<?=$row['topic_id']?>">
+                    <a class="forumHomePage" style="display:block" href="forum_topic.php?id=<?=$row['topic_id']?>">
                         <div class="forum-home-title"><?=htmlspecialchars($row['topic_subject'])?></div>
                     </a>
                 </div>

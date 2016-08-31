@@ -269,11 +269,25 @@ header .header-username:hover {
 
 */
 .postsHomePage{
-	border-radius: 20px;
-	background-color: #2d377b;
+	background-color: #098fe3;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.forumHomePage{
+	background-color: #098FE3;
+	-moz-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	-webkit-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
+.forumHomePage:hover{
+	background-color: #033655;
+
 }
 .postsHomePage:hover{
-	background-color: #293060;
+	background-color: #033655;
 }
 .home-page{
 	/*background-image: url("images/home-games.jpg");*/
@@ -289,7 +303,7 @@ header .header-username:hover {
 	width: 70%;
 	height: 400px;
 	margin: 0 auto;
-	background: #2d377b;
+	background: #098fe3;
     border: 3px solid white;
 }
 .home-game-holder {
