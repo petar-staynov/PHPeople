@@ -871,6 +871,8 @@ font-size: 20px;
 }
 .buttons-size{
 	font-size: 20px;
+	width: 20%;
+	margin: 0 auto;
 }
 .blog {
 	background-color: #e60000; /* For browsers that do not support gradients */
@@ -888,10 +890,13 @@ font-size: 20px;
 	text-align: center;
 }
 .cancel-buttons{
-	color: #098FE3;
+	color:white;
 }
 .forms{
 	text-align: center;
+}
+.select-buttons{
+	width: auto;
 }
 /*table{*/
 /*border-collapse: collapse;*/

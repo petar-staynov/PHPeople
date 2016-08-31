@@ -35,7 +35,7 @@ if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) {
         <h2 class="text-font">Таг:</h2>
 
         <div class="forms" >
-            <select name="tag" disabled/>
+            <select class="select-buttons" name="tag" disabled/>
             <option><?= $row['tag'] ?></option>
             <option>CONSOLE GAMING</option>
             <option>MOBILE GAMING</option>

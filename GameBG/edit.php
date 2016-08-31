@@ -32,13 +32,13 @@ include_once 'connection.php';
                 </div>
                 <h2 class="text-font">Таг:</h2>
                 <div class="forms">
-                    <select name="tag"/>
+                    <select class="select-buttons" name="tag"/>
                     <option>PC GAMING</option>
                     <option>CONSOLE GAMING</option>
                     <option>MOBILE GAMING</option>
                     </select>
                 </div>
-                <div class="buttons-size">
+                <div  class="buttons-size">
                     <div class="forms">
                         <input type="submit" VALUE="Редактирай" name="edit">
                         <a href="blog.php" class="cancel-buttons">[Откажи]</a>
