@@ -30,21 +30,17 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 <body class="blog">
 <div class="home-content-container">
     <div class="home-recent-news">
-        <h2 class="home-title">Последни новини (показва 3)</h2>
-        <div class="home-get-news">
-                <table>
+        <h2 class="home-title">Последни новини</h2>
+
+        <div class="home-news">
                     <?php
-                    foreach($statement as $post) :
-                        ;?>
-                        <tr>
-                            <td><?=htmlspecialchars($post['title'])?></td>
-                        </tr>
-                        <tr>
-                            <td><?=cutLongText($post['content'])?></td>
-                        </tr>
+                    foreach($statement as $post) : ;?>
+                        <a style="display:block" href="details.php?id=<?=$post['id']?>">
+                            <div class="news-title"><?=htmlspecialchars($post['title'])?></div>
+                            <div class="news-text"><?=cutLongText($post['content'])?></div>
+                        </a>
                     <?php endforeach ?>
-                </table>
-            </div>
+        </div>
     </div>
 
     <div class="home-popular-games">
@@ -80,7 +76,7 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
         </div>
     </div>
     <div class="recent-forum-posts">
-        <h2 class="home-title">Последно във форума</h2>
+        <h2 class="home-title">Последни теми във форума</h2>
         <div class="home-get-forum">
             <!-- Script that pulls latest forum posts -->
         </div>

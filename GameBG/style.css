@@ -893,6 +893,28 @@ font-size: 20px;
 .forms{
 	text-align: center;
 }
-table{
-	border-collapse: collapse;
+/*table{*/
+/*border-collapse: collapse;*/
+/*margin: 0 auto;*/
+/*width: 80%;*/
+/*}*/
+
+.home-news{
+    width: 80%;
+    text-align: center;
+}
+.news-title{
+    color: white;
+    font-size: 32px;
+    border-style: solid;
+    border-bottom: none;
+}
+.news-title a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
+.news-text{
+    border-style: solid;
+    border-top: none;
+    margin-bottom: 10px;
 }
