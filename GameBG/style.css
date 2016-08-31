@@ -901,6 +901,7 @@ font-size: 20px;
 
 .home-news{
     width: 80%;
+    margin: 0 auto;
     text-align: center;
 }
 .news-title{

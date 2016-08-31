@@ -8,7 +8,7 @@ include_once 'header.php';
 require 'connection.php';
 //require 'forum_connect.php';
 
-$statement = $connection->query('SELECT * FROM posts ORDER BY date DESC');
+$statement = $connection->query('SELECT * FROM posts ORDER BY date DESC LIMIT 3');
 $statement->fetch_all(MYSQLI_ASSOC);
 function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 {
