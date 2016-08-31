@@ -12,13 +12,13 @@ Admin priviliges  DONE
 Blog system DONE  
 Forum system DONE  
 Chat system DONE  
-Social system TODO  
-Home Page TODO  
+Social system DONE  
+Home Page DONE 
 
 **FRONTEND:**  
 Basic layout DONE  
 Design DONE  
-Effects DONE  
+Basic efects DONE  
 Anything else TODO?  
 
 **TEAM**  
