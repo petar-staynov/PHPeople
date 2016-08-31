@@ -32,6 +32,14 @@ CREATE TABLE `forum_categories` (
   `cat_description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Схема на данните от таблица `forum_categories`
+--
+
+INSERT INTO `forum_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
+(17, 'Gaming', 'This is a gaming category'),
+(18, 'Misc', 'Random stuff');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +53,16 @@ CREATE TABLE `forum_posts` (
   `post_topic` int(8) NOT NULL,
   `post_by` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `forum_posts`
+--
+
+INSERT INTO `forum_posts` (`post_id`, `post_content`, `post_date`, `post_topic`, `post_by`) VALUES
+(12, 'Let''s talk about Diablo 3', '2016-08-31 22:06:59', 8, 17),
+(13, 'This is a Battlefield 1 topic', '2016-08-31 22:07:21', 9, 17),
+(14, 'I like to play that game', '2016-08-31 22:08:15', 8, 18),
+(15, 'Overwatch topic', '2016-08-31 22:09:56', 10, 17);
 
 -- --------------------------------------------------------
 
@@ -60,6 +78,15 @@ CREATE TABLE `forum_topics` (
   `topic_by` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Схема на данните от таблица `forum_topics`
+--
+
+INSERT INTO `forum_topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`) VALUES
+(8, 'Diablo 3', '2016-08-31 22:06:59', 17, 17),
+(9, 'Battlefield 1', '2016-08-31 22:07:21', 17, 17),
+(10, 'Overwatch', '2016-08-31 22:09:56', 17, 17);
+
 -- --------------------------------------------------------
 
 --
@@ -74,6 +101,16 @@ CREATE TABLE `games` (
   `device` varchar(250) NOT NULL,
   `time_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `games`
+--
+
+INSERT INTO `games` (`id`, `game_title`, `game_desc`, `game_image`, `device`, `time_added`) VALUES
+(38, 'Call of duty', 'Call of duty е много як FPS', '35bcc8bc08ca30111c6c7b6aa63310d0.jpg', 'all', '2016-08-31 21:40:26'),
+(39, 'Battlefield 1', 'Battlefield 1 е FPS', '8f4cee650c609225239be4719cca2e95.png', 'all', '2016-08-31 21:59:06'),
+(40, 'Overwatch', 'Overwatch е игра в която се разделяте на два отбора и се цепите', '51e247ac0b34646690f0d8d1b9e46e3b.jpg', 'all', '2016-08-31 21:59:43'),
+(41, 'Diablo 3', 'Diablo 3 описание', 'a6e9a7e7b091982855bfac98d6d1313c.png', 'all', '2016-08-31 22:00:17');
 
 -- --------------------------------------------------------
 
@@ -100,6 +137,14 @@ CREATE TABLE `logs` (
   `msg` text NOT NULL,
   `color` varchar(250) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `logs`
+--
+
+INSERT INTO `logs` (`id`, `username`, `msg`, `color`) VALUES
+(3, 'user', 'Ð—Ð´Ñ€Ð°Ð²ÐµÐ¹Ñ‚Ðµ Ð¸Ð¼Ð° Ð»Ð¸ Ð½ÑÐºÐ¾Ð¸ ?', ''),
+(4, 'admin', 'Ð”Ð° Ñ‚ÑƒÐºÐ° ÑÐ¼Ðµ', '');
 
 -- --------------------------------------------------------
 
@@ -139,6 +184,14 @@ CREATE TABLE `users` (
   `date_registered` date NOT NULL,
   `user_level` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `users`
+--
+
+INSERT INTO `users` (`user_id`, `email`, `username`, `password`, `date_registered`, `user_level`) VALUES
+(17, 'admin@abv.bg', 'admin', '21232f297a57a5a743894a0e4a801fc3', '2016-08-31', 2),
+(18, 'user@abv.bg', 'user', 'ee11cbb19052e40b07aac0ca060c23ee', '2016-08-31', 0);
 
 --
 -- Indexes for dumped tables
@@ -207,22 +260,22 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `forum_categories`
 --
 ALTER TABLE `forum_categories`
-  MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `cat_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `forum_posts`
 --
 ALTER TABLE `forum_posts`
-  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `forum_topics`
 --
 ALTER TABLE `forum_topics`
-  MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `topic_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `game_users`
 --
@@ -232,7 +285,7 @@ ALTER TABLE `game_users`
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `posts`
 --
@@ -242,7 +295,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- Ограничения за дъмпнати таблици
 --
