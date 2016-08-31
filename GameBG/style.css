@@ -537,7 +537,7 @@ form input[type="submit"] {
 	width: 1280px;
 	height: 1240px;
 	margin: 50px auto;
-	background: #2A2525;
+	background: #098fe3;
 	background-size: 160%;
 	background-position: 0 0;
 	transition: background-position 7s;
@@ -587,7 +587,7 @@ form input[type="submit"] {
 .games-page .game-wrapper .single-game .game-container {
 	width: 80%;
 	margin: 0 auto;
-	background-color: #098FE3;
+	background-color: #074870;
 }
 .games-page .game-wrapper .single-game a {
 	text-decoration: none;
