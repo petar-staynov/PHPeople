@@ -269,9 +269,14 @@ header .header-username:hover {
 
 */
 .home-page{
-	background-image: url("images/home-games.jpg");
-	background-size: 100% 100vh;
-	background-repeat: no-repeat;
+	/*background-image: url("images/home-games.jpg");*/
+	/*background-size: 100% 100vh;*/
+	/*background-repeat: no-repeat;*/
+	background-color: #e60000; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left bottom, #e60000, #660000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left bottom, #e60000, #660000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left bottom, #e60000, #660000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, #e60000, #660000); /* Standard syntax */
 }
 /*
 
@@ -305,7 +310,8 @@ header .header-username:hover {
 	letter-spacing: 5px;
 }
 .games-page .play span {
-	background:#EAEAEA; 
+	background-color: #098FE3; /* For browsers that do not support gradients */
+	color: white;
     padding:0 50px; 
 }
 .games-page .game-wrapper {
@@ -567,10 +573,15 @@ td{
 	font-size: 25px;
 	padding-top: 10px;
 	padding-left: 10px;
+	color: white;
+	border-color: white;
+	text-align: center;
+	border-width: 2px;
 }
-th{
-	font-size: 20px;
-
+th {
+	font-size: 25px;
+	color: white;
+	text-align: center;
 }
 input{
 	font-size: 20px;
@@ -584,4 +595,28 @@ font-size: 20px;
 }
 .buttons-size{
 	font-size: 20px;
+}
+.blog {
+	background-color: #e60000; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left bottom, #e60000, #660000); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(left bottom, #e60000, #660000); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(left bottom, #e60000, #660000); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to left, #e60000, #660000); /* Standard syntax */
+}
+.options{
+	text-decoration: none;
+	color: #0000e6;
+}
+.text-font{
+	color: white;
+	text-align: center;
+}
+.cancel-buttons{
+	color: #098FE3;
+}
+.forms{
+	text-align: center;
+}
+table{
+	border-collapse: collapse;
 }

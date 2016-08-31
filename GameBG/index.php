@@ -1,6 +1,7 @@
+
 <?php
-    include_once 'header.php';
-    $title = "Home";
+$title = "Home";
+include_once 'header.php';
 ?>
 
 <?php
@@ -21,24 +22,29 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
     return $text . $append;
 }
 ?>
-
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body class="blog">
 <div class="home-content-container">
     <div class="home-recent-news">
         <h2 class="home-title">Последни новини (показва 3)</h2>
         <div class="home-get-news">
-            <table>
-                <?php
-                foreach($statement as $post) :
-                    ;?>
-                    <tr>
-                        <td><?=htmlspecialchars($post['title'])?></td>
-                    </tr>
-                    <tr>
-                        <td><?=cutLongText($post['content'])?></td>
-                    </tr>
-                <?php endforeach ?>
-            </table>
-        </div>
+                <table>
+                    <?php
+                    foreach($statement as $post) :
+                        ;?>
+                        <tr>
+                            <td><?=htmlspecialchars($post['title'])?></td>
+                        </tr>
+                        <tr>
+                            <td><?=cutLongText($post['content'])?></td>
+                        </tr>
+                    <?php endforeach ?>
+                </table>
+            </div>
     </div>
 
     <div class="home-popular-games">
@@ -118,7 +124,8 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
         </div>
     </div>
 </div>
-
+</body>
+</html>
 <?php
     include_once 'footer.php';
 ?>
