@@ -30,12 +30,12 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
 <body class="blog">
 <div class="home-content-container">
     <div class="home-recent-news">
-        <h2 class="home-title">Последни новини</h2>
+        <h1 class="home-title">Последни новини</h1>
 
         <div class="home-news">
                     <?php
                     foreach($statement as $post) : ;?>
-                        <a style="display:block" href="details.php?id=<?=$post['id']?>">
+                        <a class="postsHomePage" style="display:block" href="details.php?id=<?=$post['id']?>">
                             <div class="home-news-title"><?=htmlspecialchars($post['title'])?></div>
                             <div class="home-news-text"><?=cutLongText($post['content'])?></div>
                         </a>

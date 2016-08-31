@@ -268,6 +268,13 @@ header .header-username:hover {
 
 
 */
+.postsHomePage{
+	border-radius: 20px;
+	background-color: #2d377b;
+}
+.postsHomePage:hover{
+	background-color: #293060;
+}
 .home-page{
 	/*background-image: url("images/home-games.jpg");*/
 	/*background-size: 100% 100vh;*/
@@ -282,7 +289,7 @@ header .header-username:hover {
 	width: 70%;
 	height: 400px;
 	margin: 0 auto;
-	background: #098FE3;
+	background: #2d377b;
     border: 3px solid white;
 }
 .home-game-holder {
@@ -537,7 +544,7 @@ form input[type="submit"] {
 	width: 1280px;
 	height: 1240px;
 	margin: 50px auto;
-	background: #098fe3;
+	background: #2A2525;
 	background-size: 160%;
 	background-position: 0 0;
 	transition: background-position 7s;
@@ -587,7 +594,7 @@ form input[type="submit"] {
 .games-page .game-wrapper .single-game .game-container {
 	width: 80%;
 	margin: 0 auto;
-	background-color: #074870;
+	background-color: #098FE3;
 }
 .games-page .game-wrapper .single-game a {
 	text-decoration: none;
