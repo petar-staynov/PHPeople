@@ -4,30 +4,6 @@
 ?>
     <head>
         <style>
-            .helpers:hover {
-                animation: shake 2s cubic-bezier(.36,.07,.19,.97) both;
-                transform: translate3d(0, 0, 0);
-                backface-visibility: hidden;
-                perspective: 1000px;
-            }
-
-            @keyframes shake {
-                10%, 90% {
-                    transform: translate3d(-1px, 0, 0);
-                }
-
-                20%, 80% {
-                    transform: translate3d(-1px, 0, 0);
-                }
-
-                30%, 50%, 70% {
-                    transform: translate3d(-3px, 0, 0);
-                }
-
-                40%, 60% {
-                    transform: translate3d(-2px, 0, 0);
-                }
-            }
             #scrollReminder{
                 position: absolute;
                 font-size: 500%;
@@ -38,7 +14,7 @@
             }
         </style>
     </head>
-    <body style="height: 2000px; background-color: #2d377b">
+    <body style="height: 2000px; background-image: url('images/dark-red-pattern-iphone-wallpaper.jpg');">
     <footer>
         <div class="footer-1">
             <div class="footer-col">
