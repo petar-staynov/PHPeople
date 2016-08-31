@@ -86,7 +86,7 @@ include 'forum_connect.php';
                         else
                         {
                             while($topicrow = mysqli_fetch_assoc($topicsresult))
-                                echo '<a href="topic.php?id=' . $topicrow['topic_id'] . '">' . $topicrow['topic_subject'] . '</a> at ' . date('d-m-Y', strtotime($topicrow['topic_date']));
+                                echo '<a href="forum_topic.php?id=' . $topicrow['topic_id'] . '">' . $topicrow['topic_subject'] . '</a><br>' . date('d-m-Y', strtotime($topicrow['topic_date']));
                         }
                     }
                     echo '</td>';
