@@ -64,6 +64,10 @@ include 'forum_connect.php';
                     echo '<tr>';
                     echo '<td class="leftpart">';
                     echo '<h3><a href="forum_category.php?id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+                    if (isset($_SESSION['user_level'])&& $_SESSION['user_level'] != 0)
+                    {
+                        echo '<br> <a class="item-admin" href="forum_delete_category.php?id=' . $row['cat_id'] . '">Delete Category </a>';
+                    }
                     echo '</td>';
                     echo '<td class="rightpart">';
 
@@ -86,7 +90,7 @@ include 'forum_connect.php';
                         else
                         {
                             while($topicrow = mysqli_fetch_assoc($topicsresult))
-                                echo '<a href="topic.php?id=' . $topicrow['topic_id'] . '">' . $topicrow['topic_subject'] . '</a> at ' . date('d-m-Y', strtotime($topicrow['topic_date']));
+                                echo '<a href="forum_topic.php?id=' . $topicrow['topic_id'] . '">' . $topicrow['topic_subject'] . '</a><br>' . date('d-m-Y', strtotime($topicrow['topic_date']));
                         }
                     }
                     echo '</td>';

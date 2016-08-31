@@ -44,7 +44,8 @@ else
 						forum_posts.post_date,
 						forum_posts.post_by,
 						users.user_id,
-						users.username
+						users.username,
+						forum_posts.post_id
 					FROM
 						forum_posts
 					LEFT JOIN
@@ -65,10 +66,21 @@ else
 
                 while($posts_row = mysqli_fetch_assoc($posts_result))
                 {
-                    echo '<tr class="topic-post">
-							<td class="user-post">' . $posts_row['username'] . '<br/>' . date('d-m-Y H:i', strtotime($posts_row['post_date'])) . '</td>
-							<td class="post-content">' . htmlentities(stripslashes($posts_row['post_content'])) . '</td>
-						  </tr>';
+                    echo '<tr class="topic-post">';
+					echo '<td class="user-post">' . $posts_row['username'] . '<br/>' . date('d-m-Y H:i', strtotime($posts_row['post_date'])) . '</td>';
+                    if (isset($_SESSION['user_level'])&& $_SESSION['user_level'] != 0)
+                    {
+                        echo '<td class="post-content">';
+                        echo '<a class="none">' . htmlentities(stripslashes($posts_row['post_content'])) . '</a>';
+                        echo '<a><a class="item-admin" style="float: right" href="forum_delete_reply.php?id=' . $posts_row['post_id'] . '">Delete Reply</a>';
+                        echo '</td>';
+                    }
+                    else
+                    {
+                        echo '<td class="post-content">' . htmlentities(stripslashes($posts_row['post_content'])) . '</td>';
+                    }
+					echo '</tr>';
+
                 }
             }
 
@@ -86,7 +98,6 @@ else
 					</form></td></tr>';
             }
 
-            //finish the table
             echo '</table>';
         }
     }

@@ -42,6 +42,10 @@ include 'forum-header.php';
                         echo '<tr>';
                         echo '<td class="leftpart">';
                         echo '<h3><a href="forum_topic.php?id=' . $row['topic_id'] . '">' . $row['topic_subject'] . '</a><h3>';
+                        if (isset($_SESSION['user_level'])&& $_SESSION['user_level'] != 0)
+                        {
+                            echo '<a class="item-admin" href="forum_delete_topic.php?id=' . $row['topic_id'] . '">Delete Topic</a>';
+                        }
                         echo '</td>';
                         echo '<td class="rightpart">';
                         echo date('d-m-Y', strtotime($row['topic_date']));

@@ -41,11 +41,15 @@ else
                 {
                     echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
                 }
+
+//                DRAWS INPUT BOX
                 echo '</select><br />';
                 echo 'Message: <br />
                         <textarea name="post_content" /></textarea><br />
                       <input type="submit" value="Create topic" />
                       </form>';
+                echo '<p style="margin-bottom: 20px">';
+
             }
         }
     }

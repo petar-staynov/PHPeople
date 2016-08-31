@@ -1,8 +1,12 @@
-<?php
-include 'forum_connect.php';
-include 'header.php';
-include 'forum_main.php';
+<?php include
+'forum-header.php';
+?>
 
+<div class="forum-wrapper">
+    <div class="forum-content">
+        <?php
+        include 'forum_connect.php';
+        include 'header.php';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     echo 'You can not access the forum this way';
@@ -22,7 +26,7 @@ else
 
         if(!$result)
         {
-            echo 'Your reply has not been saved, please try again later.';
+            echo 'Your reply has not been saved, please try again later.' . mysqli_error($con);
         }
         else
         {
@@ -30,6 +34,7 @@ else
         }
     }
 }
-
 include 'footer.php';
 ?>
+    </div>
+</div>
