@@ -67,9 +67,11 @@
     </footer>
     <div id="scrollReminder">Scroll for more Information.</div>
     <div class="helpers" id="hi" style="position: absolute; color:white; top: 450px; opacity: 0; width: 90%;">
-        <p style="padding-right: 30px; padding-left: 30px; font-size: 222%;"><img src="images/info.png" alt="About Image" width="444" height="444" style="float: left; margin-right: 30px;"><h1 style="text-align: center">PHPeople is:</h1><h1 style="font-size: "></h1></p><h1>Petar Staynov</h1><br><h1>Angel Miladinov</h1><br><h1>Hristo Bogoes</h1><br><h1>Lyubomir Borisov</h1></div>
+        <p style="padding-right: 30px; padding-left: 30px; font-size: 222%;"><img src="images/info.png" alt="About Image" width="444" height="444" style="float: left; margin-right: 30px;"><h1 style="text-align: center">PHPeople is found by:</h1><h1 style="font-size: "></h1></p><h1>-Petar Staynov</h1><br><h1>-Angel Miladinov</h1><br><h1>-Hristo Bogoev</h1><br><h1>-Lyubomir Borisov</h1></div>
     <div class="helpers" id="hi2" style="position: absolute; color:white; top: 1000px; opacity: 0; right: 1px; width: 90%;">
-        <p style="padding-left: 30px; padding-right: 30px;"><img src="images/help-us.png" alt="About Image" width="444" height="444" style="float: right; margin-left: 30px;"><h1 style="text-align: center">This is:</h1><h1 style="text-align: center">Our SoftUni Software technologies project</h1></p></div>
+        <p style="padding-left: 30px; padding-right: 30px;"><img src="images/help-us.png" alt="About Image" width="444" height="444" style="float: right; margin-left: 30px;"><h1 style="text-align: center">This is:</h1><h1 style="text-align: center">Our SoftUni Software technologies project. The idea of this whole website is to create a better community of gamers who share the same interests. There are three categories from which you can choose: <br>-PC Games <br>-Console Games <br>-Mobile Games <br> </h1></p></div>
+    <div class="helpers" id="hi3" style="position: absolute; color:white; top: 1550px; opacity: 0; width: 90%;">
+        <p style="padding-right: 30px; padding-left: 30px; font-size: 222%;"><img src="images/email-pic.png" alt="About Image" width="444" height="444" style="float: left; margin-right: 30px;"><h1 style="text-align: center">Contact Us via E-mail:</h1><h1 style="font-size: "></h1></p><h1>First: gamebg@gmail.com</h1><h1>Secondary: phpeople@gmail.com</h1><br></div>
     <script>
         window.addEventListener('scroll', myFunction);
         function myFunction() {
