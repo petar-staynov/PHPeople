@@ -46,6 +46,7 @@ if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
 
     if (isset($_POST['post_title']) && isset($_POST['post_content']) && isset($_POST['post_title']) && isset($_POST['tag'])) {
         if (isset($_POST['create'])) {
+            $title = $_POST['post_title'];
             $content = $_POST['post_content'];
             $tag = $_POST['tag'];
             $userID = $_SESSION['user_id'];
