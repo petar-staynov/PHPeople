@@ -426,7 +426,29 @@ form input[type="submit"] {
 .profile-menu .error {
 	color: white;
 }
-
+.profile-single-game {
+	width: 33.3%;
+	height: 200px;
+}
+.profile-single-game-in {
+	width: 90%;
+	height: 100%;
+	margin: 5px auto;
+	background-color: #098FE3;
+}
+.profile-single-game-in .profile-image-holder {
+	width: 90%;
+	margin: 0 auto;
+	height: 80%;
+}
+.profile-single-game-in .profile-image-holder img {
+	width: 100%;
+	height: 100%;
+	padding-top: 5px;
+}
+.profile-single-game-in h1 {
+	font-size: 20px;
+}
 
 
 

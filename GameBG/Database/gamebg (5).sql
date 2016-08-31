@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2016 at 08:44 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- Generation Time: 
+-- Версия на сървъра: 10.1.13-MariaDB
+-- PHP Version: 5.6.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_categories`
+-- Структура на таблица `forum_categories`
 --
 
 CREATE TABLE `forum_categories` (
@@ -33,7 +33,7 @@ CREATE TABLE `forum_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `forum_categories`
+-- Схема на данните от таблица `forum_categories`
 --
 
 INSERT INTO `forum_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `forum_categories` (`cat_id`, `cat_name`, `cat_description`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_posts`
+-- Структура на таблица `forum_posts`
 --
 
 CREATE TABLE `forum_posts` (
@@ -55,17 +55,18 @@ CREATE TABLE `forum_posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `forum_posts`
+-- Схема на данните от таблица `forum_posts`
 --
 
 INSERT INTO `forum_posts` (`post_id`, `post_content`, `post_date`, `post_topic`, `post_by`) VALUES
 (1, 'I like playing games although they are for kids. My mom says I''m a human manchild but I disagree. ', '2016-08-30 15:47:57', 1, 5),
-(2, 'I''m just testing out stuff.', '2016-08-30 15:53:10', 2, 5);
+(2, 'I''m just testing out stuff.', '2016-08-30 15:53:10', 2, 5),
+(8, 'alabala', '2016-08-31 17:28:27', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `forum_topics`
+-- Структура на таблица `forum_topics`
 --
 
 CREATE TABLE `forum_topics` (
@@ -77,7 +78,7 @@ CREATE TABLE `forum_topics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `forum_topics`
+-- Схема на данните от таблица `forum_topics`
 --
 
 INSERT INTO `forum_topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_cat`, `topic_by`) VALUES
@@ -87,7 +88,7 @@ INSERT INTO `forum_topics` (`topic_id`, `topic_subject`, `topic_date`, `topic_ca
 -- --------------------------------------------------------
 
 --
--- Table structure for table `games`
+-- Структура на таблица `games`
 --
 
 CREATE TABLE `games` (
@@ -100,7 +101,7 @@ CREATE TABLE `games` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `games`
+-- Схема на данните от таблица `games`
 --
 
 INSERT INTO `games` (`id`, `game_title`, `game_desc`, `game_image`, `device`, `time_added`) VALUES
@@ -113,7 +114,27 @@ INSERT INTO `games` (`id`, `game_title`, `game_desc`, `game_image`, `device`, `t
 -- --------------------------------------------------------
 
 --
--- Table structure for table `logs`
+-- Структура на таблица `game_users`
+--
+
+CREATE TABLE `game_users` (
+  `id` int(11) NOT NULL,
+  `game` varchar(250) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `game_username` varchar(250) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `game_users`
+--
+
+INSERT INTO `game_users` (`id`, `game`, `user_id`, `game_username`) VALUES
+(5, 'Call of duty', 1, 'TheAngelM');
+
+-- --------------------------------------------------------
+
+--
+-- Структура на таблица `logs`
 --
 
 CREATE TABLE `logs` (
@@ -124,7 +145,7 @@ CREATE TABLE `logs` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `logs`
+-- Схема на данните от таблица `logs`
 --
 
 INSERT INTO `logs` (`id`, `username`, `msg`, `color`) VALUES
@@ -134,7 +155,7 @@ INSERT INTO `logs` (`id`, `username`, `msg`, `color`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Структура на таблица `posts`
 --
 
 CREATE TABLE `posts` (
@@ -147,7 +168,7 @@ CREATE TABLE `posts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `posts`
+-- Схема на данните от таблица `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `date`, `tag`, `author_id`) VALUES
@@ -158,7 +179,7 @@ INSERT INTO `posts` (`id`, `title`, `content`, `date`, `tag`, `author_id`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Структура на таблица `users`
 --
 
 CREATE TABLE `users` (
@@ -171,7 +192,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `users`
+-- Схема на данните от таблица `users`
 --
 
 INSERT INTO `users` (`user_id`, `email`, `username`, `password`, `date_registered`, `user_level`) VALUES
@@ -219,6 +240,12 @@ ALTER TABLE `games`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `game_users`
+--
+ALTER TABLE `game_users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `logs`
 --
 ALTER TABLE `logs`
@@ -251,7 +278,7 @@ ALTER TABLE `forum_categories`
 -- AUTO_INCREMENT for table `forum_posts`
 --
 ALTER TABLE `forum_posts`
-  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `post_id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `forum_topics`
 --
@@ -261,7 +288,12 @@ ALTER TABLE `forum_topics`
 -- AUTO_INCREMENT for table `games`
 --
 ALTER TABLE `games`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+--
+-- AUTO_INCREMENT for table `game_users`
+--
+ALTER TABLE `game_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `logs`
 --
@@ -278,18 +310,18 @@ ALTER TABLE `posts`
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
--- Constraints for dumped tables
+-- Ограничения за дъмпнати таблици
 --
 
 --
--- Constraints for table `forum_posts`
+-- Ограничения за таблица `forum_posts`
 --
 ALTER TABLE `forum_posts`
   ADD CONSTRAINT `forum_posts_ibfk_1` FOREIGN KEY (`post_topic`) REFERENCES `forum_topics` (`topic_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `forum_posts_ibfk_2` FOREIGN KEY (`post_by`) REFERENCES `users` (`user_id`) ON UPDATE CASCADE;
 
 --
--- Constraints for table `forum_topics`
+-- Ограничения за таблица `forum_topics`
 --
 ALTER TABLE `forum_topics`
   ADD CONSTRAINT `forum_topics_ibfk_1` FOREIGN KEY (`topic_cat`) REFERENCES `forum_categories` (`cat_id`) ON DELETE CASCADE ON UPDATE CASCADE,

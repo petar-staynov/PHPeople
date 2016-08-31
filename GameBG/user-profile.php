@@ -49,7 +49,12 @@
 			?>
 
 			<div class="profile-single-game">
-				
+				<div class="profile-single-game-in">
+					<div class="profile-image-holder">
+						<img src="images/gta-bg-1.jpg">
+					</div>
+					<h1>GTA</h1>
+				</div>
 			</div>
 		</div>
 	</div>
