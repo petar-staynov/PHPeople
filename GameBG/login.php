@@ -1,6 +1,6 @@
 <?php 
 	require 'connection.php';
-    session_start();
+  
 	if (isset($_POST['username']) && isset($_POST['password'])) {
 		//Get the user input from the form
 		$username = $_POST['username'];
@@ -14,13 +14,16 @@
 		$password = md5($password);
 
 		$sql = 'SELECT * FROM users WHERE email = "'.$username.'" AND password = "'.$password.'" OR username = "'.$username.'" AND password = "'.$password.'"';
+
 		$result = mysqli_query($connection, $sql);
-		$row = mysqli_fetch_assoc($result);
-		if (!$result) {
+
+		if (mysqli_num_rows($result) < 1) {
 			header('Location: index.php?login-error=0');
 		}
 
 		else {
+			session_start();
+			$row = mysqli_fetch_assoc($result);
 			$_SESSION['username'] = $username;
 			$_SESSION['loggedin'] = true;
 			$_SESSION['user_id'] = $row['user_id'];
