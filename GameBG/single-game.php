@@ -33,6 +33,9 @@
 						<?= $row['game_desc']; ?>
 					</p>
 				</div>
+				<div class="game-users">
+					<a href="user-list.php?id=<?= $id ?>">Потребители които играят тази игра</a>
+				</div>
 				<div class="clearfix"></div>
 			</div>
 <?php	}
