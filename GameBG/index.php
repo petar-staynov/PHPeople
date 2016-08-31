@@ -48,72 +48,34 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
     </div>
 
     <div class="home-popular-games">
-        <h2 class="home-title">Най-популярни игри (показва 3)</h2>
+        <h2 class="home-title">Най-популярни игри</h2>
         <div class="home-get-games">
+            <div class="home-game-container">
             <?php
+                require 'connection.php';
 
-            if (isset($_GET['play'])) {
-                $play = $_GET['play'];
+                $sql = 'SELECT * FROM games LIMIT 3';
 
-                $sqlCheck = 'SELECT * FROM games WHERE device = "'.$play.'" OR device = "all"';
-            }
-
-            else {
-                $sqlCheck = 'SELECT * FROM games';
-            }
-
-            $queryCheck = mysqli_query($connection, $sqlCheck);
-            $allRows = mysqli_num_rows($queryCheck);
-            $pages = ceil($allRows / 12);
-
-            if (isset($_GET['page'])) {
-                $page = $_GET['page'];
-            }
-
-            else {
-                $page = 1;
-            }
-
-            $start_from = ($page - 1) * 12;
-
-            if (isset($_GET['play'])) {
-                $play = $_GET['play'];
-
-                if ($play != "all") {
-                    $sql = 'SELECT * FROM games WHERE device = "'.$play.'" OR device = "all" LIMIT '.$start_from.', 12';
-                }
-
-                else {
-                    $sql = "SELECT * FROM games LIMIT $start_from, 12";
-                }
-            }
-
-            else {
-                $sql = "SELECT * FROM games LIMIT $start_from, 12";
-            }
 
             $query = mysqli_query($connection, $sql);
 
             while ($row = mysqli_fetch_assoc($query)) { ?>
-                <div class="single-game">
-                    <div class="game-container">
-                        <a href="single-game.php?id=<?= $row['id']; ?>">
-                            <div class="game-image">
-                                <img src="admin/game-images/<?= $row['game_image']; ?>">
-                            </div>
-                            <div class="game-title">
-                                <h2><?= $row['game_title']; ?></h2>
-                            </div>
-                        </a>
+                
+                    <div class="home-game-holder">
+                       
+                           <div class="home-game">
+                            <a href="single-game.php?id=<?= $row['id'] ?>">
+                               <div class="game-image-holder">
+                                   <img src="admin/game-images/<?= $row['game_image'] ?>">
+                               </div>
+                               <h1><?= $row['game_title'] ?></h1>
+                               </a>
+                           </div> 
+                       
                     </div>
-                </div>
+                
             <?php	}
             ?>
-            <div class="page-holder">
-                <?php	for ($i=1; $i <= $pages; $i++) { ?>
-                    <a href="games.php?page=<?=$i?>"><?=$i?></a>
-                <?php	}
-                ?>
             </div>
         </div>
     </div>
