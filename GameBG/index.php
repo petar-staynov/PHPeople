@@ -92,7 +92,6 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
             <?php	}
             ?>
         </div>
-        ?>
     </div>
 </div>
 </body>
