@@ -41,6 +41,15 @@
 					<input type="text" name="game_username" placeholder="Username в играта*">
 				</div>
 				<input type="submit" value="Добави">
+				<?php 
+					if (isset($_GET['error'])) {
+						$error = $_GET['error'];
+
+						if ($error == "play") {
+							echo "<p>Ти вече играеш тази игра</p>";
+						}
+					}
+				?>
 			</form>
 			<hr>
 
