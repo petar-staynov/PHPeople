@@ -26,7 +26,7 @@ $(document).ready(function () {
         e.preventDefault();
         //check if both UserName and ChatBox have been filled out;
         if (document.getElementById('msg').value == ''){
-            alert("Type your Username AND your message!");
+            alert("Type your message!");
             return true;
         }
         //lock in your userName;
@@ -45,6 +45,13 @@ $(document).ready(function () {
         };
     });
 
+    document.getElementById("msg").onkeyup = function(e){
+        e = e || event;
+        if (e.keyCode === 13) {
+            $("#sendMsgButton").click();
+        }
+        return true;
+    };
         $("#chat-button").click(function (e) {
             e.preventDefault();
             if (hiddenChat){

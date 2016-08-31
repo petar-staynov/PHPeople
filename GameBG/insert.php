@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])){
 }else{
     $uname = $_SESSION['username'];
 }
-$msg = $_REQUEST['msg'];
+$msg =  str_replace("'","''",$_REQUEST['msg']);
 $servername = "localhost";
 $username = "root";
 $password = "";
