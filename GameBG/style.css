@@ -283,6 +283,7 @@ header .header-username:hover {
 	height: 400px;
 	margin: 0 auto;
 	background: #098FE3;
+    border: 3px solid white;
 }
 .home-game-holder {
 	width: 33.3%;
@@ -296,7 +297,8 @@ header .header-username:hover {
 	width: 70%;
 	height: 90%;
 	margin: 18px auto 0 auto;
-	background-color: #098FE3;
+	background-color: #074870;
+
 }
 .home-game .game-image-holder {
 	width: 90%;
@@ -905,7 +907,7 @@ font-size: 20px;
 /*}*/
 
 .home-news{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
 }
@@ -933,7 +935,7 @@ font-size: 20px;
     font-size: 32px;
     text-decoration: none;
     border-style: solid;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 10px;
 
