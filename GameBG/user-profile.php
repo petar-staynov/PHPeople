@@ -31,7 +31,7 @@
 							$query = mysqli_query($connection, $sql);
 
 							while ($row = mysqli_fetch_assoc($query)) { ?>
-								<option value="<?= $row['game_title'] ?>"><?= $row['game_title'] ?></option>
+								<option value="<?= $row['id'] ?>"><?= $row['game_title'] ?></option>
 					<?php	}
 						?>
 					</select>
@@ -45,17 +45,33 @@
 			<hr>
 
 			<?php 
+				$idTemp = $_SESSION['user_id'];
+				$sqlGames = "SELECT * FROM game_users WHERE user_id = $idTemp";
+				
+				$queryGames = mysqli_query($connection, $sqlGames);
 
-			?>
+				while ($row = mysqli_fetch_assoc($queryGames)) { ?>
+					<div class="profile-single-game">
+						<div class="profile-single-game-in">
+							<a href="single-game.php?id=<?= $row['game'] ?>">
+								
+								<?php 
+									$sqlTemp = 'SELECT * FROM games WHERE id = "'.$row['game'].'"';
 
-			<div class="profile-single-game">
-				<div class="profile-single-game-in">
-					<div class="profile-image-holder">
-						<img src="images/gta-bg-1.jpg">
+									$queryTemp = mysqli_query($connection, $sqlTemp);
+
+									$rowTemp = mysqli_fetch_assoc($queryTemp);
+									$title = $rowTemp['game_title'];
+								?>
+								<div class="profile-image-holder">
+									<img src="admin/game-images/<?= $rowTemp['game_image'] ?>">
+								</div>
+								<h1><?= $title ?></h1>
+							</a>
+						</div>
 					</div>
-					<h1>GTA</h1>
-				</div>
-			</div>
+		<?php	}
+			?>
 		</div>
 	</div>
 </div>

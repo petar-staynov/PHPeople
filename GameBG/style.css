@@ -429,6 +429,8 @@ form input[type="submit"] {
 .profile-single-game {
 	width: 33.3%;
 	height: 200px;
+	margin-bottom: 10px;
+	float: left;
 }
 .profile-single-game-in {
 	width: 90%;
@@ -448,6 +450,9 @@ form input[type="submit"] {
 }
 .profile-single-game-in h1 {
 	font-size: 20px;
+}
+.profile-single-game-in a {
+	text-decoration: none;
 }
 
 

@@ -34,6 +34,11 @@
 			}
 
 			else {
+				$sqlGet = 'SELECT * FROM users WHERE username = "'.$username.'"';
+				$queryGet = mysqli_query($connection, $sqlGet);
+				$rowGet = mysqli_fetch_assoc($queryGet);
+
+				$_SESSION["user_id"] = $rowGet['user_id'];
 				$_SESSION["username"] = $username;
 				$_SESSION["loggedin"] = true;
 				header('Location: index.php');
