@@ -7,9 +7,6 @@
 			<div>
 				<p>&copy;PHPeople. All rights reserved.</p>
 			</div>
-			<div>
-				<a href="#"><img src="images/footer-facebook.png" id="facebook"></a>
-			</div>
 		</div>
 	</div>
 </footer>
