@@ -904,13 +904,17 @@ font-size: 20px;
     margin: 0 auto;
     text-align: center;
 }
+.home-page a {
+	color: white;
+	text-decoration: none;
+}
 .home-news-title{
     color: white;
     font-size: 32px;
     border-style: solid;
     border-bottom: none;
 }
-.home-news-title a, a:link, a:visited, a:focus, a:hover, a:active {
+.home-news-title a{
     color: white;
     text-decoration: none;
 }
