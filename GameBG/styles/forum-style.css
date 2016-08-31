@@ -33,7 +33,6 @@ body {
     padding: 5px 30px;
     background-color: #FFF;
     text-align: left;
-    font-size: 85%;
 }
 
 .forum-menu a:hover {
@@ -83,11 +82,12 @@ h1, #footer {
 h3 {margin: 0; padding: 0;}
 
 /* Menu styles */
-.item, .item-admin, .item-username,.forum-signin-button, .forum-register-button {
+.item, .item-admin, .item-username {
     background-color: #086dac;
     border: 1px solid #032472;
     color: #FFF;
     font-family: Arial;
+    font-size: small;
     padding: 3px;
     text-decoration: none;
 }

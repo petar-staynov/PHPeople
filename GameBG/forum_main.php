@@ -64,6 +64,10 @@ include 'forum_connect.php';
                     echo '<tr>';
                     echo '<td class="leftpart">';
                     echo '<h3><a href="forum_category.php?id=' . $row['cat_id'] . '">' . $row['cat_name'] . '</a></h3>' . $row['cat_description'];
+                    if (isset($_SESSION['user_level'])&& $_SESSION['user_level'] != 0)
+                    {
+                        echo '<br> <a class="item-admin" href="forum_delete_category.php?id=' . $row['cat_id'] . '">Delete Category </a>';
+                    }
                     echo '</td>';
                     echo '<td class="rightpart">';
 
