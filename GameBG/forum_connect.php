@@ -5,6 +5,7 @@ $password = '';
 $database = 'gamebg';
 
 $con = mysqli_connect("localhost", "root", "");
+mysqli_set_charset($con, 'utf8');
 
 if (!mysqli_connect($server, $username, $password))
 {

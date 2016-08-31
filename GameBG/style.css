@@ -454,6 +454,31 @@ form input[type="submit"] {
 .profile-single-game-in a {
 	text-decoration: none;
 }
+.profile-posts-holder {
+	width: 48%;
+	height: 550px;
+	box-sizing: border-box;
+	border: 1px solid #098FE3;
+	float: right;
+	margin-top: 5px;
+	overflow: scroll;
+}
+.profile-posts-holder a {
+	text-decoration: none;
+}
+.profile-single-post {
+	width: 95%;
+	height: 100px;
+	margin: 10px auto;
+	border: 2px solid #098FE3;
+	overflow: hidden;
+}
+.profile-single-post p {
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
+	padding: 5px;
+}
 
 
 

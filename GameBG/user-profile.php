@@ -15,7 +15,7 @@
 			<h1>Моите игри</h1>
 		</div>
 		<div class="profile-menu-div">
-			<h1>Моите постове</h1>
+			<h1>Моите теми</h1>
 		</div>
 		<div class="profile-games-holder">
 			<form method="POST" action="profile-add-game.php" id="game-form">
@@ -72,6 +72,22 @@
 					</div>
 		<?php	}
 			?>
+		</div>
+		<div class="profile-posts-holder">
+
+		<?php 
+			$sqlForum = "SELECT * FROM forum_posts WHERE post_by = $idTemp";
+
+			$queryForum = mysqli_query($connection, $sqlForum);
+
+			while ($rowForum = mysqli_fetch_assoc($queryForum)) { ?>
+				<a href="forum_topic.php?id=<?= $rowForum['post_topic'] ?>">
+				 	<div class="profile-single-post">
+				 		<p><?= $rowForum['post_content'] ?></p>
+				 	</div>
+				</a>
+	<?php	}
+		?>
 		</div>
 	</div>
 </div>
