@@ -39,6 +39,7 @@
 				$rowGet = mysqli_fetch_assoc($queryGet);
 
 				$_SESSION["user_id"] = $rowGet['user_id'];
+				$_SESSION['user_level'] = $rowGet['user_level'];
 				$_SESSION["username"] = $username;
 				$_SESSION["loggedin"] = true;
 				header('Location: index.php');

@@ -67,6 +67,7 @@
 									<img src="admin/game-images/<?= $rowTemp['game_image'] ?>">
 								</div>
 								<h1><?= $title ?></h1>
+								<a href="profile-delete-game.php?id=<?= $row['id'] ?>">Изтрий</a>
 							</a>
 						</div>
 					</div>

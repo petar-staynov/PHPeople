@@ -428,7 +428,7 @@ form input[type="submit"] {
 }
 .profile-single-game {
 	width: 33.3%;
-	height: 200px;
+	height: 250px;
 	margin-bottom: 10px;
 	float: left;
 }
@@ -437,11 +437,12 @@ form input[type="submit"] {
 	height: 100%;
 	margin: 5px auto;
 	background-color: #098FE3;
+	text-align: center; 
 }
 .profile-single-game-in .profile-image-holder {
 	width: 90%;
 	margin: 0 auto;
-	height: 80%;
+	height: 70%;
 }
 .profile-single-game-in .profile-image-holder img {
 	width: 100%;
@@ -453,6 +454,8 @@ form input[type="submit"] {
 }
 .profile-single-game-in a {
 	text-decoration: none;
+	color: white;
+	font-family: 'Lato', sans-serif;
 }
 .profile-posts-holder {
 	width: 48%;
