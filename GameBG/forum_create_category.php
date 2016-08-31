@@ -9,7 +9,7 @@ require 'forum_connect.php';
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['user_level'] = 1 || $_SESSION['user_level'] = 2) {
     {
 //       displays the form
-        echo '<form method="post" action="">
+        echo '<form method="post" action="" class="form-forum">
             Category name: <br/>
             <input type="text" name="cat_name" /><br/>
             Category description: <br/>

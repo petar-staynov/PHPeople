@@ -44,13 +44,13 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
     </div>
 
     <div class="home-popular-games">
-        <h2 class="home-title">Най-популярни игри</h2>
+        <h2 class="home-title">Най-нови игри</h2>
         <div class="home-get-games">
             <div class="home-game-container">
             <?php
                 require 'connection.php';
 
-                $sql = 'SELECT * FROM games LIMIT 3';
+                $sql = 'SELECT * FROM games ORDER BY time_added DESC LIMIT 3';
 
 
             $query = mysqli_query($connection, $sql);
@@ -93,9 +93,10 @@ function cutLongText($text,  $maxSize=100,  $htmlEscape = true)
             ?>
         </div>
     </div>
+    <div class="clearfix">
+        
+    </div>
 </div>
-</body>
-</html>
 <?php
 include_once 'footer.php';
 ?>
