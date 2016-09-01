@@ -20,7 +20,7 @@ else
     else
     {
         $sql = "INSERT INTO forum_posts(post_content, post_date, post_topic, post_by) 
-				VALUES ('" . $_POST['reply-content'] . "', NOW(), " . mysqli_real_escape_string($con, $_GET['id']) . ", " . $_SESSION['user_id'] . ")";
+				VALUES ('" . mysqli_real_escape_string($con, $_POST['reply-content']) . "', NOW(), " . mysqli_real_escape_string($con, $_GET['id']) . ", " . $_SESSION['user_id'] . ")";
 
         $result = mysqli_query($con, $sql);
 
