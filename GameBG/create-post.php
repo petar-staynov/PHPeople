@@ -43,20 +43,19 @@ if($_SESSION['user_level'] == 1 || $_SESSION['user_level'] == 2) { ?>
     </body>
     </html>
     <?php
-
-    if (isset($_POST['post_title']) && isset($_POST['post_content']) && isset($_POST['post_title']) && isset($_POST['tag'])) {
         if (isset($_POST['create'])) {
             $title = $_POST['post_title'];
             $content = $_POST['post_content'];
             $tag = $_POST['tag'];
             $userID = $_SESSION['user_id'];
-            $statement = $connection->prepare('INSERT INTO posts (title, content, tag, author_id) VALUES (?,?,?,?)');
-            $statement->bind_param("sssi", $title, $content, $tag, $userID);
-            $statement->execute();
-            header('Location: blog.php');
-            die();
+            if($title != "" && $content != "") {
+                $statement = $connection->prepare('INSERT INTO posts (title, content, tag, author_id) VALUES (?,?,?,?)');
+                $statement->bind_param("sssi", $title, $content, $tag, $userID);
+                $statement->execute();
+                header('Location: blog.php');
+                die();
+            }
         }
-    }
 }
 else {
     header('Location: index.php');

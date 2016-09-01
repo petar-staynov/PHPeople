@@ -13,6 +13,7 @@ include_once 'connection.php';
         $id = $_GET['id'];
         $statement = $connection->query('SELECT * FROM posts WHERE id = ' . $id . '');
         $row = $statement->fetch_assoc();
+        if($row == "") {header('Location: blog.php');}
         ?>
         <?php if ($_SESSION['user_id'] == $row['author_id'] || $_SESSION['username'] == "admin") { ?>
             <html>
@@ -47,16 +48,20 @@ include_once 'connection.php';
             </form>
             </body>
             </html>
-            <?php if (isset($_POST['edit'])) {
-                $title = $_POST['post_title'];
-                $content = $_POST['post_content'];
-                $tag = $_POST['tag'];
-                $statement = $connection->prepare('UPDATE posts SET title = ?, content = ?, tag = ? WHERE id = ?');
-                $statement->bind_param('sssi', $title, $content, $tag, $id);
-                $statement->execute();
-                header('Location: blog.php');
-                die();
-            }
+
+            <?php
+                if (isset($_POST['edit'])) {
+                    $title = $_POST['post_title'];
+                    $content = $_POST['post_content'];
+                    $tag = $_POST['tag'];
+                    if($title != "" && $content != "") {
+                        $statement = $connection->prepare('UPDATE posts SET title = ?, content = ?, tag = ? WHERE id = ?');
+                        $statement->bind_param('sssi', $title, $content, $tag, $id);
+                        $statement->execute();
+                        header('Location: blog.php');
+                        die();
+                    }
+                }
         }
         else {header('Location: blog.php'); die;}
     }
@@ -65,7 +70,6 @@ include_once 'connection.php';
         die;
     }
     ?>
-
     </body>
     </html>
 <?php include_once 'footer.php'?>
