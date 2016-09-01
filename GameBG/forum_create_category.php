@@ -21,8 +21,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 
 //    Sends category forms text to DB
         if (isset($_POST["cat_name"]) && isset($_POST["cat_description"])) {
-            $cat_name = $_POST['cat_name'];
-            $cat_description = $_POST['cat_description'];
+            $cat_name = mysqli_real_escape_string($con, $_POST['cat_name']);
+            $cat_description = mysqli_real_escape_string($con, $_POST['cat_description']);
 
 //          $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('$cat_name', '$cat_description')";
             $sql = "INSERT INTO forum_categories(cat_name, cat_description) VALUES ('$cat_name', '$cat_description')";
